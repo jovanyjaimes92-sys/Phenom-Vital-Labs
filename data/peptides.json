@@ -1,0 +1,1985 @@
+{
+  "peptides": [
+    {
+      "id": "ace031",
+      "name": "ACE 031",
+      "category": "Myostatin Inhibitor",
+      "research": "ACE-031 is a decoy receptor for myostatin and related proteins. Clinical trials showed rapid muscle mass increases (3+ lbs lean mass in 1 month) in muscular dystrophy patients. Acts by binding myostatin before it can inhibit muscle growth.",
+      "mechanism": "ACE-031 is a soluble form of the Activin receptor type IIB (ActRIIB) that acts as a decoy receptor. It binds circulating myostatin, activins, and other TGF-beta superfamily members that limit muscle growth, preventing them from signaling to muscle cells.",
+      "halfLife": "~15 days",
+      "freq": "Weekly",
+      "cycle": "4-8 weeks",
+      "low": 0,
+      "med": 1,
+      "high": 2,
+      "f": 1,
+      "wks": 6,
+      "fixed": true,
+      "pros": [
+        "Rapid muscle mass increase (3+ lbs/month)",
+        "Binds myostatin systemically",
+        "Effective in muscular dystrophy trials",
+        "Novel mechanism (decoy receptor)",
+        "Long half-life (weekly dosing)"
+      ],
+      "cons": [
+        "Nosebleeds common side effect",
+        "Limited availability",
+        "Very expensive",
+        "Muscle cramps reported",
+        "Safety profile not fully established"
+      ],
+      "warnings": [
+        "Bleeding: nosebleeds and bleeding risk",
+        "Pregnancy: contraindicated",
+        "Cancer: theoretical concerns",
+        "Cardiovascular: monitor",
+        "General: potent compound - caution"
+      ],
+      "inst": [
+        "Weekly subcutaneous injection",
+        "Start low (0.5mg) and assess tolerance",
+        "Monitor for nosebleeds",
+        "Cycle 4-8 weeks then break",
+        "Combine with resistance training"
+      ]
+    },
+    {
+      "id": "adamax",
+      "name": "Adamax",
+      "category": "Nootropic & Neuroprotective",
+      "research": "Adamax is a synthetic analog of Semax with enhanced potency and duration. Developed from ACTH (4-10) fragment with added adamantane group for improved BBB penetration. Russian research shows cognitive enhancement, neuroprotection, and anxiolytic effects.",
+      "mechanism": "Adamax is a modified ACTH fragment with adamantane moiety for enhanced lipophilicity and BBB penetration. It modulates BDNF expression, improves cerebral circulation, and has neuroprotective properties. The adamantane group extends duration of action.",
+      "halfLife": "Unknown (longer than Semax)",
+      "freq": "Daily",
+      "cycle": "Continuous OK",
+      "low": 500,
+      "med": 1000,
+      "high": 2000,
+      "f": 7,
+      "wks": 12,
+      "fixed": true,
+      "pros": [
+        "Enhanced BBB penetration vs Semax",
+        "Cognitive enhancement",
+        "Neuroprotective effects",
+        "Anxiolytic (anti-anxiety) properties",
+        "Longer duration than parent peptide",
+        "Russian nootropic with research backing"
+      ],
+      "cons": [
+        "Limited Western clinical data",
+        "Very potent - start low",
+        "Expensive",
+        "Effects subtle for some",
+        "Most effective intranasal (not injection)"
+      ],
+      "warnings": [
+        "Pregnancy: contraindicated",
+        "Autoimmune: may modulate immune function",
+        "General: potent cognitive compound"
+      ],
+      "inst": [
+        "Can be subcutaneous or intranasal",
+        "Intranasal more common for Adamax",
+        "Daily dosing for cognitive benefits",
+        "Morning dosing preferred",
+        "Cycle 3 months on",
+        "1 month off optional"
+      ]
+    },
+    {
+      "id": "adipotide",
+      "name": "Adipotide",
+      "category": "Experimental Fat Targeting",
+      "research": "Adipotide is a peptidomimetic designed to induce apoptosis in blood vessels supplying white adipose tissue (fat). Preclinical studies in monkeys showed rapid fat loss by cutting off blood supply to fat cells. Experimental/research only.",
+      "mechanism": "Adipotide binds to prohibitin and annexin A2 receptors on blood vessel endothelial cells in white adipose tissue, triggering apoptosis of the blood vessels. This cuts off blood supply to fat cells, causing them to die and be reabsorbed.",
+      "halfLife": "Unknown",
+      "freq": "Daily",
+      "cycle": "4-6 weeks",
+      "low": 10,
+      "med": 20,
+      "high": 40,
+      "f": 7,
+      "wks": 5,
+      "fixed": true,
+      "pros": [
+        "Targets fat cells directly",
+        "Rapid fat loss in animal studies",
+        "Does not affect muscle or other tissue",
+        "Novel mechanism (vascular targeting)",
+        "Extremely potent in studies"
+      ],
+      "cons": [
+        "Experimental - no human approval",
+        "Safety profile unknown",
+        "May affect other tissues with similar receptors",
+        "Rapid fat loss may cause gallstones",
+        "Expensive and hard to source",
+        "Serious safety concerns"
+      ],
+      "warnings": [
+        "Kidney function: monitor closely",
+        "Gallstones: rapid fat loss risk",
+        "Pregnancy: absolute contraindication",
+        "General: experimental compound - extreme caution",
+        "Medical supervision absolutely required"
+      ],
+      "inst": [
+        "Subcutaneous injection near fat deposits",
+        "Daily administration for 4-6 weeks",
+        "Monitor kidney function throughout",
+        "Hydration critical",
+        "Cycle limited to 4-6 weeks maximum",
+        "Medical supervision mandatory"
+      ]
+    },
+    {
+      "id": "aicar",
+      "name": "AICAR (Acadesine)",
+      "category": "AMPK Activator - Metabolic",
+      "research": "AICAR is an AMPK (AMP-activated protein kinase) activator studied for metabolic benefits, exercise mimetics, and cardioprotection. Research shows enhanced fat oxidation, improved insulin sensitivity, and endurance enhancement in animal studies.",
+      "mechanism": "AICAR is taken up by cells and converted to ZMP, which mimics AMP and activates AMPK - the cellular energy sensor. AMPK activation promotes fat oxidation, glucose uptake, mitochondrial biogenesis, and autophagy. Called \"exercise in a pill\" in research.",
+      "halfLife": "Unknown",
+      "freq": "Daily",
+      "cycle": "8 on, 4 off",
+      "low": 50,
+      "med": 100,
+      "high": 200,
+      "f": 7,
+      "wks": 8,
+      "fixed": true,
+      "pros": [
+        "Activates AMPK (metabolic master switch)",
+        "Enhances fat oxidation",
+        "Improves insulin sensitivity",
+        "Mitochondrial biogenesis support",
+        "Exercise-mimetic effects",
+        "Cardioprotective in studies"
+      ],
+      "cons": [
+        "Banned by WADA (performance enhancer)",
+        "Limited human data",
+        "Expensive for research",
+        "Effects less dramatic than exercise",
+        "May cause hypoglycemia"
+      ],
+      "warnings": [
+        "Hypoglycemia: monitor blood sugar",
+        "Heart conditions: may affect rhythm",
+        "Pregnancy: contraindicated",
+        "Athletes: banned substance",
+        "General: research compound"
+      ],
+      "inst": [
+        "Subcutaneous injection daily",
+        "Higher doses (100-200mg) for metabolic effects",
+        "Morning dosing may enhance fat oxidation",
+        "Combine with exercise for synergistic effects",
+        "Cycle 8 weeks on",
+        "4 weeks off"
+      ]
+    },
+    {
+      "id": "aod9604",
+      "name": "AOD-9604",
+      "category": "HGH Fragment (Fat Oxidation)",
+      "research": "AOD-9604 is the C-terminus fragment of HGH (amino acids 177-191). Clinical trials show fat oxidation without affecting blood glucose or IGF-1. Originally developed as anti-obesity drug with favorable safety profile.",
+      "mechanism": "AOD-9604 mimics the fat-burning region of natural GH without the growth-promoting or blood sugar effects. It stimulates lipolysis (fat breakdown) and inhibits lipogenesis (fat storage) through modulation of beta-3-adrenergic receptors and other pathways.",
+      "halfLife": "Unknown (short)",
+      "freq": "2-3x daily",
+      "cycle": "Continuous OK",
+      "low": 300,
+      "med": 600,
+      "high": 1000,
+      "f": 21,
+      "wks": 12,
+      "fixed": true,
+      "pros": [
+        "Burns fat without affecting blood glucose",
+        "Does NOT raise IGF-1 (safer than GH)",
+        "No impact on insulin sensitivity",
+        "No water retention",
+        "No impact on natural GH production",
+        "FDA granted Generally Recognized As Safe (GRAS) status"
+      ],
+      "cons": [
+        "Requires multiple daily injections",
+        "Effects more modest than GLP-1 drugs",
+        "Best on empty stomach (timing constraint)",
+        "Must be combined with diet for results",
+        "Shorter half-life requires frequent dosing",
+        "Less potent than modern weight loss peptides"
+      ],
+      "warnings": [
+        "Pregnancy: insufficient data",
+        "Cancer: theoretically safer (no IGF-1 elevation)",
+        "Diabetes: does NOT affect glucose (safe)",
+        "Heart conditions: consult physician",
+        "Generally recognized as safest weight loss peptide"
+      ],
+      "inst": [
+        "Morning on empty stomach (pre-breakfast)",
+        "Pre-workout for enhanced fat oxidation",
+        "Before bed (optional third dose)",
+        "Subcutaneous abdominal fat preferred",
+        "Works best with caloric deficit and exercise"
+      ]
+    },
+    {
+      "id": "ara290",
+      "name": "ARA290 (Cibinetide)",
+      "category": "Neuropathic Pain & Tissue Repair",
+      "research": "ARA290 is a synthetic peptide that mimics the tissue-protective effects of erythropoietin (EPO) without stimulating red blood cell production. Clinical trials for neuropathic pain (small fiber neuropathy) and tissue protection. FDA Breakthrough Therapy designation.",
+      "mechanism": "ARA290 binds to the tissue-protective heteromeric receptor (EPOR/CD131) without activating the classical EPOR homodimer responsible for erythropoiesis. This provides tissue protection, nerve regeneration, and pain relief without increasing hematocrit or blood viscosity.",
+      "halfLife": "Unknown",
+      "freq": "Daily or 3x weekly",
+      "cycle": "12 weeks",
+      "low": 1,
+      "med": 2,
+      "high": 4,
+      "f": 7,
+      "wks": 12,
+      "fixed": true,
+      "pros": [
+        "Tissue protective effects without RBC increase",
+        "Neuropathic pain relief",
+        "Nerve regeneration support",
+        "No hematocrit elevation (unlike EPO)",
+        "FDA Breakthrough Therapy designation",
+        "Safe for long-term use"
+      ],
+      "cons": [
+        "Limited availability",
+        "Expensive",
+        "Requires consistent use",
+        "Effects take weeks for pain relief",
+        "Injection required"
+      ],
+      "warnings": [
+        "Cardiovascular: theoretical benefits but monitor",
+        "Cancer: may support tissue repair",
+        "Pregnancy: insufficient data",
+        "General: generally well-tolerated"
+      ],
+      "inst": [
+        "Subcutaneous injection daily or 3x weekly",
+        "Higher doses (2-4mg) for severe neuropathy",
+        "Commit to 12 weeks for full effects",
+        "Can combine with other nerve support",
+        "Monitor pain levels and nerve function"
+      ]
+    },
+    {
+      "id": "b733",
+      "name": "B7-33",
+      "category": "Anti-Fibrotic Bioregulator",
+      "research": "B7-33 is a synthetic peptide derived from the HSP20 protein family. Research shows potent anti-fibrotic effects, particularly in cardiac and pulmonary fibrosis models. It inhibits TGF-beta signaling pathway to prevent fibrotic tissue deposition.",
+      "mechanism": "B7-33 acts as a competitive inhibitor of TGF-beta signaling by binding to the TGF-beta receptor complex. This prevents downstream fibrotic signaling, reducing collagen deposition and fibroblast activation in tissues prone to fibrosis.",
+      "halfLife": "Unknown",
+      "freq": "Daily",
+      "cycle": "12 weeks",
+      "low": 0,
+      "med": 1,
+      "high": 2,
+      "f": 7,
+      "wks": 12,
+      "fixed": true,
+      "pros": [
+        "Potent anti-fibrotic effects",
+        "Inhibits TGF-beta pathway",
+        "Cardiac fibrosis protection",
+        "Pulmonary fibrosis potential",
+        "Research for multiple fibrotic conditions",
+        "Novel mechanism"
+      ],
+      "cons": [
+        "Limited human data",
+        "Expensive",
+        "Research still emerging",
+        "Effects require long-term use",
+        "Availability limited"
+      ],
+      "warnings": [
+        "Wound healing: may slow (caution)",
+        "Pregnancy: contraindicated",
+        "Surgery: timing considerations",
+        "General: research compound"
+      ],
+      "inst": [
+        "Subcutaneous injection daily",
+        "Higher doses (1-2mg) for severe fibrosis",
+        "Commit to 12-week minimum protocol",
+        "Monitor for tissue changes",
+        "Combine with other anti-fibrotics if indicated"
+      ]
+    },
+    {
+      "id": "blend_gh1",
+      "name": "CJC1295 NO DAC + Ipamorelin Blend",
+      "category": "GH Stack (5mg+5mg)",
+      "research": "Pre-mixed blend: CJC-1295 NO DAC 5mg + Ipamorelin 5mg per vial. Combines pulsatile GH release of Mod GRF with selective GHRP action of Ipamorelin.",
+      "mechanism": "Dual mechanism: CJC NO DAC creates pulsatile GH elevation via GHRH stimulation. Ipamorelin adds selective ghrelin receptor activation without cortisol/prolactin elevation. Together they optimize GH secretion patterns.",
+      "halfLife": "Mixed (30min + 2hrs)",
+      "freq": "2-3x daily",
+      "cycle": "12 on, 4 off",
+      "low": 0.2,
+      "med": 0.3,
+      "high": 0.5,
+      "f": 21,
+      "wks": 12,
+      "fixed": true,
+      "pros": [
+        "Synergistic GH effect",
+        "Pre-mixed convenience",
+        "Pulsatile GH pattern",
+        "No cortisol/prolactin elevation (Ipamorelin component)"
+      ],
+      "cons": [
+        "Multiple daily injections required",
+        "Must dose on empty stomach"
+      ],
+      "warnings": [
+        "Cancer history: elevates IGF-1",
+        "Pregnancy: contraindicated"
+      ],
+      "inst": [
+        "Contains 5mg CJC-1295 NO DAC + 5mg Ipamorelin (10mg total)",
+        "Typical dose: 300mcg (0.3mg) of each peptide per injection",
+        "Inject 2-3 times daily on empty stomach",
+        "Morning, pre-workout, and bedtime ideal",
+        "Empty stomach: wait 30 min after injection before eating"
+      ]
+    },
+    {
+      "id": "blend_heal",
+      "name": "BPC 157 + TB 500 Blend",
+      "category": "Healing Blend (5mg+5mg)",
+      "research": "Pre-mixed blend: BPC-157 5mg + TB-500 5mg per vial. Combines local tissue repair with systemic stem cell activation.",
+      "mechanism": "BPC-157 promotes local angiogenesis and collagen synthesis at injury sites, while TB-500 mobilizes stem cells and enhances systemic tissue regeneration through actin regulation.",
+      "halfLife": "Mixed (4hrs + days)",
+      "freq": "5x weekly",
+      "cycle": "6 on, 4 off",
+      "low": 0.5,
+      "med": 1,
+      "high": 1.5,
+      "f": 5,
+      "wks": 6,
+      "fixed": true,
+      "pros": [
+        "Pre-mixed convenience",
+        "Combines local and systemic healing",
+        "Popular for severe injuries",
+        "10mg total per vial"
+      ],
+      "cons": [
+        "5 injections per week",
+        "Higher cost than single peptides"
+      ],
+      "warnings": [
+        "Same cancer precautions as individual peptides",
+        "Autoimmune: use caution"
+      ],
+      "inst": [
+        "Contains 5mg BPC-157 + 5mg TB-500 (10mg total)",
+        "Typical dose: 1mg total (500mcg of each peptide) per injection",
+        "Subcutaneous injection 5 days per week",
+        "Rotate injection sites",
+        "Can dose higher initially for acute injuries"
+      ]
+    },
+    {
+      "id": "blend_heal_20",
+      "name": "BPC 157 + TB 500 Blend (High Dose)",
+      "category": "Healing Blend (10mg+10mg)",
+      "research": "Pre-mixed blend: BPC-157 10mg + TB-500 10mg per vial. Higher dose version for severe injuries or faster recovery protocols.",
+      "mechanism": "Same synergistic mechanism: BPC-157 provides local tissue repair while TB-500 mobilizes stem cells systemically. Higher concentration allows lower volume per injection.",
+      "halfLife": "Mixed (4hrs + days)",
+      "freq": "5x weekly",
+      "cycle": "6 on, 4 off",
+      "low": 1,
+      "med": 1.5,
+      "high": 2,
+      "f": 5,
+      "wks": 6,
+      "fixed": true,
+      "pros": [
+        "Higher concentration (20mg total)",
+        "Lower injection volume per dose",
+        "Better value for high-dose protocols",
+        "Same synergistic healing effects"
+      ],
+      "cons": [
+        "Higher upfront cost",
+        "5 injections per week required"
+      ],
+      "warnings": [
+        "Same cancer precautions as individual peptides",
+        "Autoimmune: use caution"
+      ],
+      "inst": [
+        "Contains 10mg BPC-157 + 10mg TB-500 (20mg total)",
+        "Typical dose: 1.5mg total (750mcg of each peptide) per injection",
+        "Subcutaneous injection 5 days per week",
+        "Lower volume per injection vs standard blend",
+        "Ideal for severe injuries or faster recovery"
+      ]
+    },
+    {
+      "id": "bpc157",
+      "name": "BPC 157",
+      "category": "Healing & Recovery",
+      "research": "Over 120 peer-reviewed studies demonstrate accelerated healing via the nitric oxide pathway. Originally derived from human gastric juice, BPC-157 shows remarkable tissue repair properties across tendon, ligament, muscle, and intestinal tissue. Studies report 30-40% faster wound healing in animal models.",
+      "mechanism": "BPC-157 activates the VEGF (vascular endothelial growth factor) pathway, enhancing nitric oxide synthesis and angiogenesis. It upregulates growth hormone receptors and promotes tendon cell proliferation. The peptide modulates dopaminergic and serotonergic systems, contributing to its systemic healing effects.",
+      "halfLife": "4-6 hours",
+      "freq": "Daily",
+      "cycle": "4 on, 2 off (repeatable)",
+      "low": 5,
+      "med": 10,
+      "high": 15,
+      "f": 7,
+      "wks": 4,
+      "fixed": false,
+      "pros": [
+        "Accelerates tendon and ligament healing by 30-40%",
+        "Repairs damaged intestinal lining (IBD/IBS support)",
+        "Reduces inflammation without immune suppression",
+        "Protects against NSAID-induced gastric damage",
+        "No known significant side effects at therapeutic doses",
+        "Systemic and local effects depending on injection site"
+      ],
+      "cons": [
+        "Daily injections required (subcutaneous or intramuscular)",
+        "Must be administered on empty stomach",
+        "Most effective when injected near injury site",
+        "Limited long-term human clinical trials",
+        "Banned by WADA for competitive athletes"
+      ],
+      "warnings": [
+        "Contraindicated in active malignancy (promotes angiogenesis)",
+        "Pregnancy and breastfeeding: insufficient safety data",
+        "Autoimmune conditions: theoretical interaction concern",
+        "Blood clotting disorders: may affect fibrinolysis"
+      ],
+      "inst": [
+        "Reconstitute 5mg vial with 3ml bacteriostatic water",
+        "Inject subcutaneously near injury site OR abdominal fat",
+        "Morning on empty stomach",
+        "30 minutes before eating",
+        "Can be stacked with TB-500 for enhanced healing",
+        "Store reconstituted vial refrigerated (2-8°C)"
+      ]
+    },
+    {
+      "id": "cagrilintide",
+      "name": "Cagrilintide",
+      "category": "Amylin Analog - Appetite Suppression",
+      "research": "Cagrilintide is a long-acting amylin analog developed by Novo Nordisk. Phase 3 trials show significant weight loss when combined with semaglutide (CagriSema). Amylin acts on brain satiety centers and slows gastric emptying.",
+      "mechanism": "Cagrilintide mimics human amylin, a hormone co-secreted with insulin from pancreatic beta cells. It acts on amylin receptors in the brainstem to induce satiety, reduces glucagon secretion, and slows gastric emptying. The long-acting formulation allows weekly dosing.",
+      "halfLife": "~7 days",
+      "freq": "Weekly",
+      "cycle": "Continuous",
+      "low": 0,
+      "med": 1,
+      "high": 2,
+      "f": 1,
+      "wks": 16,
+      "fixed": true,
+      "pros": [
+        "Long-acting weekly injection",
+        "Potent appetite suppression",
+        "Combines well with semaglutide (CagriSema)",
+        "Slows gastric emptying",
+        "May improve glycemic control",
+        "Novel mechanism (amylin vs GLP-1)"
+      ],
+      "cons": [
+        "Nausea common initially",
+        "Must titrate slowly",
+        "Limited as monotherapy (best combined)",
+        "Injectable only",
+        "Newer with less long-term data"
+      ],
+      "warnings": [
+        "Pancreatitis: monitor for symptoms",
+        "Gastroparesis: may worsen",
+        "Thyroid: monitor (class effect)",
+        "Pregnancy: contraindicated",
+        "Gallbladder: risk of stones"
+      ],
+      "inst": [
+        "Weekly subcutaneous injection",
+        "Start low and titrate every 2 weeks",
+        "Combine with semaglutide for maximum effect",
+        "Take on same day each week",
+        "Monitor for nausea - may need antiemetics initially"
+      ]
+    },
+    {
+      "id": "cagrisema",
+      "name": "Cagrisema (Cagrilintide + Semaglutide)",
+      "category": "Dual Weight Loss Combo (2.5mg+2.5mg)",
+      "research": "Pre-mixed blend: Cagrilintide 2.5mg + Semaglutide 2.5mg per vial. Combines amylin analog (Cagrilintide) appetite suppression with GLP-1 (Semaglutide) effects. CagriSema Phase 3 trials show superior weight loss to either drug alone.",
+      "mechanism": "Dual mechanism: Cagrilintide mimics amylin for satiety and slowed gastric emptying. Semaglutide activates GLP-1 receptors for appetite suppression and enhanced insulin secretion. Together they provide complementary pathways for weight management.",
+      "halfLife": "~7 days (Cagrilintide) + 7 days (Semaglutide)",
+      "freq": "Weekly",
+      "cycle": "Continuous",
+      "low": 0.125,
+      "med": 0.25,
+      "high": 0.5,
+      "f": 1,
+      "wks": 16,
+      "fixed": true,
+      "pros": [
+        "Combines two weight loss mechanisms",
+        "Pre-mixed convenience",
+        "Weekly injection only",
+        "Amylin + GLP-1 synergy",
+        "5mg total per vial (2.5+2.5)"
+      ],
+      "cons": [
+        "Must titrate slowly",
+        "Nausea common initially",
+        "Injectable only",
+        "Newer combination with less data"
+      ],
+      "warnings": [
+        "Pancreatitis: monitor for symptoms",
+        "Gastroparesis: may worsen",
+        "Thyroid: monitor (class effect)",
+        "Pregnancy: contraindicated",
+        "Gallbladder: risk of stones"
+      ],
+      "inst": [
+        "Contains 2.5mg Cagrilintide + 2.5mg Semaglutide (5mg total)",
+        "Typical starting dose: 0.25mg total per week",
+        "Weekly subcutaneous injection",
+        "Start low and titrate every 2-4 weeks",
+        "Take on same day each week",
+        "Monitor for nausea - may need antiemetics initially"
+      ]
+    },
+    {
+      "id": "cjc1295",
+      "name": "CJC1295 DAC",
+      "category": "Growth Hormone Release",
+      "research": "Clinical studies demonstrate sustained GH elevation for up to 6 days after single injection. The DAC (Drug Affinity Complex) extends half-life from minutes to days by binding to albumin. Research shows 2-10x increase in GH levels with minimal side effects.",
+      "mechanism": "CJC-1295 is a GHRH (growth hormone releasing hormone) analog with DAC modification that significantly extends its half-life. It stimulates the pituitary to release GH in a more sustained manner compared to natural GHRH. The DAC component binds to albumin, creating a depot effect.",
+      "halfLife": "8 days",
+      "freq": "2x weekly",
+      "cycle": "12 on, 4 off",
+      "low": 1000,
+      "med": 2000,
+      "high": 3000,
+      "f": 2,
+      "wks": 12,
+      "fixed": true,
+      "pros": [
+        "Only 2 injections per week needed",
+        "Elevates baseline GH for sustained effect",
+        "Long half-life due to DAC modification",
+        "Synergistic with GHRPs like Ipamorelin",
+        "Improves body composition over time",
+        "Enhanced recovery and sleep quality"
+      ],
+      "cons": [
+        "Water retention common initially",
+        "Less selective than Ipamorelin",
+        "Can cause numbness/tingling in extremities",
+        "Requires cycling to maintain effectiveness",
+        "More expensive than regular CJC-1295 (no DAC)"
+      ],
+      "warnings": [
+        "Cancer history: elevates IGF-1",
+        "Water retention: caution with heart/kidney issues",
+        "Diabetes: monitor blood glucose",
+        "Carpal tunnel syndrome: may worsen symptoms"
+      ],
+      "inst": [
+        "Subcutaneous injection 2x per week (e.g.",
+        "Monday/Thursday)",
+        "Can cause initial water retention (usually temporary)",
+        "Best stacked with GHRP for enhanced GH release",
+        "Evening injection may improve sleep",
+        "Rotate injection sites weekly"
+      ]
+    },
+    {
+      "id": "cjc1295_nodac",
+      "name": "CJC-1295 NO DAC (Mod GRF 1-29)",
+      "category": "Growth Hormone Release",
+      "research": "CJC-1295 without DAC (also called Modified GRF 1-29) is the shorter-acting version. Clinical research shows it creates a natural GH pulse without the prolonged elevation of the DAC version. Preferred by some for more natural GH patterns and less water retention.",
+      "mechanism": "Mod GRF 1-29 is a modified GHRH (1-29) with enhanced stability. It stimulates pituitary GH release in a pulsatile fashion similar to natural GHRH. The lack of DAC means shorter duration but more natural GH patterns without prolonged elevation.",
+      "halfLife": "30 minutes",
+      "freq": "1-3x daily",
+      "cycle": "12 on, 4 off",
+      "low": 1,
+      "med": 2,
+      "high": 3,
+      "f": 21,
+      "wks": 12,
+      "fixed": true,
+      "pros": [
+        "More natural GH pulse pattern",
+        "Less water retention than DAC version",
+        "Shorter half-life = more control",
+        "Pulsatile release mimics natural",
+        "Stack with GHRP for synergistic effect",
+        "Less suppression of natural production"
+      ],
+      "cons": [
+        "Multiple daily injections required",
+        "Shorter duration means less convenience",
+        "Must be combined with GHRP for best results",
+        "Effects more subtle than DAC version",
+        "Requires precise timing"
+      ],
+      "warnings": [
+        "Cancer: standard GH precautions",
+        "Water retention: less than DAC but possible",
+        "Diabetes: monitor glucose",
+        "General: safer profile than DAC version"
+      ],
+      "inst": [
+        "Inject with GHRP (Ipamorelin or GHRP-2)",
+        "Morning",
+        "pre-workout",
+        "and bedtime",
+        "Empty stomach 30min before eating",
+        "Subcutaneous abdominal injection",
+        "Creates pulsatile GH release - natural pattern"
+      ]
+    },
+    {
+      "id": "cortagen",
+      "name": "Cortagen",
+      "category": "Adrenal Bioregulator",
+      "research": "Cortagen is a synthetic tripeptide bioregulator for the adrenal cortex. Russian research shows normalization of adrenal function, improved stress response, and regulation of cortisol production in patients with adrenal dysfunction.",
+      "mechanism": "Cortagen acts on adrenal cortex cells to normalize hormone synthesis. It helps regulate the synthesis of glucocorticoids and mineralocorticoids, supporting healthy stress response and electrolyte balance without suppressing natural function.",
+      "halfLife": "Unknown",
+      "freq": "Daily",
+      "cycle": "20 days every 6 months",
+      "low": 1,
+      "med": 2,
+      "high": 3,
+      "f": 1,
+      "wks": 3,
+      "fixed": true,
+      "pros": [
+        "Adrenal cortex regulation",
+        "Stress response normalization",
+        "Russian bioregulator research",
+        "Minimal side effects",
+        "Supports cortisol balance",
+        "Short course twice yearly"
+      ],
+      "cons": [
+        "Limited Western data",
+        "Effects subtle",
+        "Not for acute adrenal crisis",
+        "Requires consistent course",
+        "Research primarily from Russia"
+      ],
+      "warnings": [
+        "Adrenal insufficiency: adjunctive only",
+        "Pregnancy: contraindicated",
+        "Steroid medications: may interact",
+        "General: not replacement for adrenal meds"
+      ],
+      "inst": [
+        "Subcutaneous injection",
+        "20-day course twice yearly",
+        "Morning dosing (adrenal support timing)",
+        "Can combine with other bioregulators",
+        "Monitor stress response and energy"
+      ]
+    },
+    {
+      "id": "crystagen",
+      "name": "Crystagen",
+      "category": "Immune Bioregulator",
+      "research": "Crystagen is a synthetic tripeptide bioregulator for the immune system. Russian clinical studies show improved immune response, enhanced T-cell function, and normalization of immune activity in patients with immune dysregulation.",
+      "mechanism": "Crystagen acts on immune cells to normalize proliferation and differentiation. It supports thymus function and T-cell maturation, helping regulate both underactive and overactive immune responses for balanced immune surveillance.",
+      "halfLife": "Unknown",
+      "freq": "Daily",
+      "cycle": "20 days every 6 months",
+      "low": 1,
+      "med": 2,
+      "high": 3,
+      "f": 1,
+      "wks": 3,
+      "fixed": true,
+      "pros": [
+        "Immune system regulation",
+        "T-cell function support",
+        "Russian bioregulator research",
+        "Minimal side effects",
+        "Balances immune response",
+        "Short course twice yearly"
+      ],
+      "cons": [
+        "Limited Western clinical data",
+        "Effects gradual",
+        "Not for acute infections",
+        "Requires consistent course",
+        "Research primarily Russian"
+      ],
+      "warnings": [
+        "Autoimmune: may modulate (monitor)",
+        "Immunosuppressants: may interact",
+        "Pregnancy: contraindicated",
+        "General: not replacement for immune therapy"
+      ],
+      "inst": [
+        "Subcutaneous injection",
+        "20-day course twice yearly",
+        "Can combine with other bioregulators",
+        "Take during immune challenge periods",
+        "Monitor immune function markers"
+      ]
+    },
+    {
+      "id": "dermorphin",
+      "name": "Dermorphin",
+      "category": "Opioid Peptide (Research)",
+      "research": "Dermorphin is a heptapeptide found in South American tree frog skin with potent mu-opioid activity (40x morphine). Research only - not approved for human use. Extremely potent opioid effects with short duration.",
+      "mechanism": "Dermorphin is a potent and selective mu-opioid receptor (MOR) agonist with approximately 40x the potency of morphine. It produces analgesia through the same pathways as traditional opioids but with different selectivity and side effect profiles.",
+      "halfLife": "Unknown (short)",
+      "freq": "Research only",
+      "cycle": "Not applicable",
+      "low": 1,
+      "med": 2,
+      "high": 5,
+      "f": 1,
+      "wks": 1,
+      "fixed": true,
+      "pros": [
+        "Extremely potent analgesia (40x morphine)",
+        "Novel amphibian origin",
+        "Research applications",
+        "Different receptor binding than morphine"
+      ],
+      "cons": [
+        "Research only - not for human use",
+        "Highly addictive potential",
+        "Respiratory depression risk",
+        "Short duration requires frequent dosing",
+        "Legal restrictions"
+      ],
+      "warnings": [
+        "Addiction: extremely high risk",
+        "Respiratory: fatal depression possible",
+        "Overdose: extremely dangerous",
+        "Legal: controlled/restricted",
+        "General: research compound ONLY"
+      ],
+      "inst": [
+        "RESEARCH COMPOUND ONLY",
+        "Not for human consumption",
+        "Extreme potency requires caution",
+        "Legal compliance mandatory",
+        "Professional research use only"
+      ]
+    },
+    {
+      "id": "dihexa",
+      "name": "Dihexa",
+      "category": "Nootropic & Neurogenic",
+      "research": "Dihexa is a synthetic hepatocyte growth factor (HGF) mimetic developed at Washington State University. Research shows 7x more potent than BDNF for synaptogenesis. Studies demonstrate enhanced memory formation, cognitive performance, and potential neuroprotective effects.",
+      "mechanism": "Dihexa crosses the blood-brain barrier and activates the HGF/c-MET pathway, promoting synaptogenesis (formation of new synapses) and neurogenesis. It enhances dendritic arborization and has shown 7x the synapse-forming activity of brain-derived neurotrophic factor (BDNF).",
+      "halfLife": "Unknown",
+      "freq": "Daily",
+      "cycle": "8-12 weeks",
+      "low": 5,
+      "med": 10,
+      "high": 20,
+      "f": 7,
+      "wks": 10,
+      "fixed": true,
+      "pros": [
+        "7x more potent than BDNF for synaptogenesis",
+        "Crosses blood-brain barrier",
+        "Enhances memory formation",
+        "Neuroprotective potential",
+        "Promotes new neural connections",
+        "Cognitive enhancement"
+      ],
+      "cons": [
+        "Limited human clinical data",
+        "Very potent - respect dosing",
+        "Expensive",
+        "Effects may take weeks to notice",
+        "Research still emerging"
+      ],
+      "warnings": [
+        "Cancer: HGF pathway may theoretically support",
+        "Neurological conditions: insufficient data",
+        "Pregnancy: contraindicated",
+        "General: potent neurological compound"
+      ],
+      "inst": [
+        "Subcutaneous injection daily",
+        "Some use intranasal (less bioavailable)",
+        "Consistent daily use for 8-12 weeks",
+        "Cycle off 4 weeks before repeating",
+        "Monitor cognitive clarity and memory"
+      ]
+    },
+    {
+      "id": "dsip",
+      "name": "DSIP",
+      "category": "Sleep & Recovery Peptide",
+      "research": "Delta Sleep-Inducing Peptide discovered in 1963. Research shows promotion of slow-wave (deep) sleep without sedation or hangover. May modulate stress hormones and improve recovery. Studied for insomnia, withdrawal, and stress-related conditions.",
+      "mechanism": "DSIP crosses the blood-brain barrier and modulates sleep-wake cycles by interacting with GABAergic and monoaminergic systems. It increases slow-wave sleep (stages 3-4) without altering REM sleep. Also influences ACTH/cortisol and may have anti-stress effects.",
+      "halfLife": "Unknown (short)",
+      "freq": "Daily at bedtime",
+      "cycle": "As needed",
+      "low": 100,
+      "med": 200,
+      "high": 300,
+      "f": 7,
+      "wks": 4,
+      "fixed": true,
+      "pros": [
+        "Promotes deep sleep without sedation",
+        "No morning grogginess or hangover",
+        "May reduce chronic pain perception",
+        "Stress hormone modulation",
+        "Non-addictive",
+        "Does not suppress REM sleep",
+        "Studied for withdrawal symptoms"
+      ],
+      "cons": [
+        "Effects subtle in some users",
+        "May require consistent use",
+        "Very short half-life",
+        "Limited modern clinical trials",
+        "Not first-line for severe insomnia",
+        "Individual response varies significantly"
+      ],
+      "warnings": [
+        "Depression: may theoretically affect mood",
+        "Pregnancy: insufficient data",
+        "Sedatives: additive effects possible",
+        "Autoimmune: may modulate immune function",
+        "General caution due to CNS effects"
+      ],
+      "inst": [
+        "Subcutaneous injection 30 minutes before bed",
+        "Start with 200mcg and adjust",
+        "Consistent timing improves results",
+        "Can combine with other sleep hygiene practices",
+        "Cycle 4 weeks on",
+        "then assess need for continuation"
+      ]
+    },
+    {
+      "id": "dulaglutide",
+      "name": "Dulaglutide (Trulicity)",
+      "category": "FDA-Approved GLP-1 Agonist",
+      "research": "FDA approved 2014 for type 2 diabetes. Weekly GLP-1 agonist with proven cardiovascular benefits (REDUCES major CV events). REWIND trial showed reduced stroke/MI in diabetics with CV risk. Now studied for weight loss and prediabetes.",
+      "mechanism": "Dulaglutide is a long-acting GLP-1 receptor agonist with albumin-binding domain for extended half-life. It enhances glucose-dependent insulin secretion, suppresses glucagon, slows gastric emptying, and promotes satiety. Cardiovascular benefits beyond glucose lowering.",
+      "halfLife": "~5 days",
+      "freq": "Weekly",
+      "cycle": "Continuous",
+      "low": 0,
+      "med": 1,
+      "high": 3,
+      "f": 1,
+      "wks": 16,
+      "fixed": true,
+      "pros": [
+        "FDA approved with CV benefits",
+        "Proven to reduce stroke/MI/death",
+        "Weekly injection (convenient)",
+        "Weight loss benefits",
+        "Prediabetes treatment",
+        "Lower cost than newer GLP-1s"
+      ],
+      "cons": [
+        "Less weight loss than semaglutide (~10% vs 15%)",
+        "GI side effects common",
+        "Injectable only",
+        "Thyroid box warning",
+        "Requires injection training"
+      ],
+      "warnings": [
+        "Thyroid C-cell tumors: boxed warning",
+        "Pancreatitis: monitor symptoms",
+        "Gastroparesis: may worsen",
+        "Renal: caution with impairment",
+        "Pregnancy: discontinue",
+        "Gallbladder: stone risk"
+      ],
+      "inst": [
+        "Weekly subcutaneous injection",
+        "Pre-filled pen device",
+        "Any time of day",
+        "same day each week",
+        "Titrate from 0.75mg to 1.5mg to 3mg",
+        "Take with food if nausea occurs",
+        "Monitor blood glucose and weight"
+      ]
+    },
+    {
+      "id": "epo",
+      "name": "EPO (Erythropoietin)",
+      "category": "Red Blood Cell Stimulator",
+      "research": "Recombinant human erythropoietin is FDA approved for anemia in kidney disease, cancer, and other conditions. Stimulates red blood cell production in bone marrow. Well-established clinical use with defined protocols.",
+      "mechanism": "EPO binds to the erythropoietin receptor (EPOR) on erythroid progenitor cells in bone marrow, promoting survival, proliferation, and differentiation of red blood cell precursors. Increases hematocrit and oxygen-carrying capacity.",
+      "halfLife": "4-13 hours (IV)",
+      "freq": "3x weekly",
+      "cycle": "As prescribed",
+      "low": 1000,
+      "med": 3000,
+      "high": 5000,
+      "f": 3,
+      "wks": 4,
+      "fixed": true,
+      "pros": [
+        "FDA approved for anemia",
+        "Well-established safety profile",
+        "Effective RBC production",
+        "Improves oxygen capacity",
+        "Multiple approved indications"
+      ],
+      "cons": [
+        "Requires frequent injections",
+        "Elevates hematocrit",
+        "Risk of thrombosis",
+        "Banned by WADA",
+        "Requires monitoring"
+      ],
+      "warnings": [
+        "Thrombosis: elevated risk",
+        "Hypertension: may worsen",
+        "Cancer: tumor progression risk",
+        "Heart failure: fluid retention",
+        "Pregnancy: risk/benefit analysis"
+      ],
+      "inst": [
+        "Subcutaneous or IV injection",
+        "3 times weekly typical",
+        "Monitor hemoglobin/hematocrit",
+        "Target Hgb 10-12 g/dL",
+        "Medical supervision required"
+      ]
+    },
+    {
+      "id": "follistatin",
+      "name": "Follistatin 344",
+      "category": "Myostatin Inhibitor",
+      "research": "Follistatin inhibits myostatin, the protein that limits muscle growth. Research in muscular dystrophy and muscle wasting shows dramatic increases in muscle mass when myostatin is blocked. Some subjects gained 20%+ lean mass in studies.",
+      "mechanism": "Follistatin binds to and neutralizes myostatin (GDF-8) and activin A, removing the \"brakes\" on muscle growth. By inhibiting these negative regulators, it allows muscles to grow beyond normal genetic limits. Also affects follicle-stimulating hormone.",
+      "halfLife": "Unknown (hours)",
+      "freq": "1-2x weekly",
+      "cycle": "10 on, 6 off",
+      "low": 50,
+      "med": 100,
+      "high": 200,
+      "f": 2,
+      "wks": 10,
+      "fixed": true,
+      "pros": [
+        "Blocks myostatin (muscle growth limiter)",
+        "Potential for muscle mass beyond genetic limits",
+        "Research shows dramatic gains in muscle wasting",
+        "May improve muscle quality in aging",
+        "Only 1-2 injections per week needed",
+        "Long-lasting effects per injection"
+      ],
+      "cons": [
+        "Very expensive",
+        "Limited human clinical data",
+        "May affect reproductive hormones (FSH)",
+        "Ethical concerns in competitive sports",
+        "Unknown long-term safety profile",
+        "Requires careful sourcing (often faked)"
+      ],
+      "warnings": [
+        "Reproductive: affects FSH and fertility",
+        "Heart: theoretical cardiac muscle concerns",
+        "Tendons: rapid muscle growth may outpace tendon strength",
+        "Cancer: removing growth limits theoretically risky",
+        "Pregnancy: absolute contraindication"
+      ],
+      "inst": [
+        "Subcutaneous injection 1-2 times per week",
+        "Effects are systemic (not site-specific)",
+        "Cycle length typically 10-12 weeks",
+        "Often stacked with IGF-1 for synergistic growth",
+        "Monitor for tendon issues as muscles grow faster"
+      ]
+    },
+    {
+      "id": "foxo4",
+      "name": "FOXO4-DRI (Senolytic)",
+      "category": "Senolytic & Longevity",
+      "research": "FOXO4-DRI is a senolytic peptide that induces apoptosis in senescent (\"zombie\") cells. Research published in Cell (2017) showed extended lifespan and restored physical capacity in aging mice. Selectively targets harmful senescent cells while sparing healthy cells.",
+      "mechanism": "FOXO4-DRI interferes with the FOXO4-p53 interaction that keeps senescent cells alive. By blocking this interaction, p53 is freed to trigger apoptosis (programmed cell death) specifically in senescent cells. This clears aged cells without affecting healthy tissue.",
+      "halfLife": "Unknown",
+      "freq": "Intermittent (biweekly)",
+      "cycle": "Intermittent pulses",
+      "low": 1,
+      "med": 2,
+      "high": 5,
+      "f": 1,
+      "wks": 1,
+      "fixed": true,
+      "pros": [
+        "Clears senescent \"zombie\" cells",
+        "Restores tissue function in aging",
+        "Selective - spares healthy cells",
+        "May extend healthspan",
+        "Improved physical capacity in studies",
+        "One of few proven senolytics"
+      ],
+      "cons": [
+        "Very expensive",
+        "Limited human data (mostly mouse studies)",
+        "Optimal dosing schedule unclear",
+        "Requires intermittent use (not daily)",
+        "Availability limited"
+      ],
+      "warnings": [
+        "Cancer: theoretically beneficial but monitor",
+        "Immune suppression: clears immune senescent cells",
+        "Pregnancy: contraindicated",
+        "General: potent compound - respect dosing"
+      ],
+      "inst": [
+        "Subcutaneous injection 1-2 times per week",
+        "Cycle: 2-4 weeks on",
+        "then 4-8 weeks off",
+        "Higher doses less frequently may be optimal",
+        "Combine with other longevity strategies",
+        "Monitor for improved energy/recovery"
+      ]
+    },
+    {
+      "id": "frag1723",
+      "name": "Fragment 17-23",
+      "category": "HGH Fragment Alternative",
+      "research": "Fragment 17-23 is a modified version of the HGH Fragment 176-191 with additional amino acids. Research suggests enhanced fat oxidation and metabolic effects compared to the shorter fragment. Limited clinical data available.",
+      "mechanism": "Fragment 17-23 contains the full fat-burning region of HGH (amino acids 177-191) plus additional stabilizing residues. It mimics the lipolytic effects of natural GH without affecting blood glucose or IGF-1 levels, potentially with enhanced stability.",
+      "halfLife": "Unknown",
+      "freq": "2-3x daily",
+      "cycle": "Continuous OK",
+      "low": 200,
+      "med": 500,
+      "high": 1000,
+      "f": 21,
+      "wks": 12,
+      "fixed": true,
+      "pros": [
+        "Enhanced stability vs 176-191",
+        "Fat oxidation without GH effects",
+        "No IGF-1 elevation",
+        "Does not affect blood glucose",
+        "Research alternative to AOD-9604"
+      ],
+      "cons": [
+        "Limited human data",
+        "Requires multiple daily injections",
+        "Research compound",
+        "Expensive",
+        "Less established than AOD-9604"
+      ],
+      "warnings": [
+        "Pregnancy: insufficient data",
+        "Cancer: theoretically safer",
+        "General: research compound"
+      ],
+      "inst": [
+        "Subcutaneous injection",
+        "2-3 times daily on empty stomach",
+        "Pre-workout for fat oxidation",
+        "Combine with diet and exercise",
+        "Morning and evening dosing"
+      ]
+    },
+    {
+      "id": "ghrp2",
+      "name": "GHRP-2",
+      "category": "Potent GH Secretagogue",
+      "research": "Considered the most potent of the GHRP family with high affinity for the ghrelin receptor. Studies show 3-5x GH release compared to baseline. However, it raises cortisol and prolactin, requiring careful consideration for users sensitive to these hormones.",
+      "mechanism": "GHRP-2 is a potent synthetic agonist of the ghrelin receptor (GHS-R1a). It triggers massive pulsatile GH release by mimicking ghrelin, the \"hunger hormone.\" Unlike Ipamorelin, it also stimulates ACTH and prolactin release, creating a more pronounced but less selective GH response.",
+      "halfLife": "15-30 minutes",
+      "freq": "2-3x daily",
+      "cycle": "8-12 on, 4 off",
+      "low": 1,
+      "med": 1,
+      "high": 2,
+      "f": 21,
+      "wks": 10,
+      "fixed": false,
+      "pros": [
+        "Most potent GHRP (stronger than GHRP-6)",
+        "Dramatic GH elevation (3-5x baseline)",
+        "Significant appetite stimulation (for bulking)",
+        "Enhances muscle fullness and pump",
+        "Rapid onset of effects",
+        "Cost-effective GH secretagogue"
+      ],
+      "cons": [
+        "Raises cortisol (stress hormone)",
+        "Elevates prolactin (can cause gynecomastia)",
+        "Strong hunger stimulation may be unwanted",
+        "May cause lethargy after injection",
+        "Water retention common",
+        "Desensitization with prolonged use"
+      ],
+      "warnings": [
+        "High cortisol: caution with adrenal issues",
+        "Elevated prolactin: monitor for gynecomastia",
+        "Diabetes: significant glucose impact",
+        "Anxiety disorders: may worsen symptoms",
+        "Cancer history: standard GH precautions"
+      ],
+      "inst": [
+        "Administer 2-3 times daily on empty stomach",
+        "Pre-workout injection enhances training pump",
+        "Prepare for significant hunger after dosing",
+        "Cycle 8-12 weeks maximum before break",
+        "Consider P5P supplement to manage prolactin"
+      ]
+    },
+    {
+      "id": "ghrp6",
+      "name": "GHRP-6",
+      "category": "Hunger-Stimulating GH Secretagogue",
+      "research": "Extensively studied for GH deficiency and cachexia. Known primarily for intense appetite stimulation via ghrelin mimicry. Clinical use in patients needing weight gain. GH-releasing potency similar to GHRP-2 but with more pronounced hunger effects.",
+      "mechanism": "GHRP-6 binds to ghrelin receptors in the hypothalamus and pituitary, triggering GH release AND intense hunger signaling. The appetite stimulation is a direct result of ghrelin receptor activation in feeding centers. Creates significant GH pulses but with cortisol/prolactin elevation.",
+      "halfLife": "15-30 minutes",
+      "freq": "2-3x daily",
+      "cycle": "8-12 on, 4 off",
+      "low": 1,
+      "med": 1,
+      "high": 2,
+      "f": 21,
+      "wks": 10,
+      "fixed": false,
+      "pros": [
+        "Intense appetite stimulation (best for hardgainers)",
+        "Strong GH release comparable to GHRP-2",
+        "Effective for muscle gain phases",
+        "Lower cost than Ipamorelin",
+        "Improved sleep quality reported",
+        "Enhanced recovery from training"
+      ],
+      "cons": [
+        "EXTREME hunger (can be problematic)",
+        "Raises cortisol levels significantly",
+        "Elevates prolactin",
+        "Water retention and bloating",
+        "Initial lethargy after injection",
+        "Tingling/numbness in extremities"
+      ],
+      "warnings": [
+        "Eating disorders: may trigger unhealthy patterns",
+        "Diabetes: major glucose metabolism effects",
+        "High cortisol: stress-related conditions",
+        "Obesity: appetite stimulation counterproductive",
+        "Cancer: standard GH/IGF-1 precautions"
+      ],
+      "inst": [
+        "Inject when you want to eat (timing critical)",
+        "Have food ready - hunger hits within 30 minutes",
+        "Pre-workout can provide energy but may cause hypoglycemia",
+        "Best for bulking phases",
+        "not cutting",
+        "Consider if struggling to consume enough calories"
+      ]
+    },
+    {
+      "id": "glutathione",
+      "name": "Glutathione (Reduced)",
+      "category": "Master Antioxidant & Detox",
+      "research": "Glutathione is the body\\",
+      "mechanism": "Glutathione is a tripeptide (glutamate-cysteine-glycine) that neutralizes free radicals, supports phase II liver detoxification, and regenerates other antioxidants (vitamin C, E). It binds to toxins for elimination and maintains cellular redox balance.",
+      "halfLife": "Unknown (minutes)",
+      "freq": "2-3x weekly",
+      "cycle": "Continuous OK",
+      "low": 600,
+      "med": 1500,
+      "high": 2000,
+      "f": 3,
+      "wks": 12,
+      "fixed": true,
+      "pros": [
+        "Master antioxidant - neutralizes free radicals",
+        "Supports liver detoxification pathways",
+        "Skin brightening/anti-melanin effects",
+        "Heavy metal chelation support",
+        "Immune system support",
+        "Regenerates other antioxidants"
+      ],
+      "cons": [
+        "Very short half-life when oral (poor absorption)",
+        "Injection required for therapeutic levels",
+        "Effects temporary without consistent use",
+        "Taste/smell issues (sulfur)",
+        "May cause sulfur body odor"
+      ],
+      "warnings": [
+        "Asthma: may worsen symptoms (rare)",
+        "Sulfur sensitivity: may react",
+        "Pregnancy: insufficient data",
+        "General: very safe profile"
+      ],
+      "inst": [
+        "Subcutaneous or IM injection (IV preferred for high doses)",
+        "2-3 times weekly maintenance",
+        "Morning dosing may enhance detox",
+        "Combine with vitamin C for synergy",
+        "For skin: higher doses (1500-2000mcg)"
+      ]
+    },
+    {
+      "id": "gonadorelin",
+      "name": "Gonadorelin",
+      "category": "Gonadotropin Releasing Hormone",
+      "research": "Gonadorelin is synthetic GnRH that stimulates the pituitary to release LH and FSH. Used for fertility treatments, hypogonadism testing, and PCT. Short-acting version requires pulsatile administration unlike long-acting analogs.",
+      "mechanism": "Gonadorelin binds to GnRH receptors in the anterior pituitary, stimulating pulsatile release of LH and FSH. This stimulates gonadal function and testosterone production. Short half-life requires frequent administration to maintain natural pulsatility.",
+      "halfLife": "~4 minutes",
+      "freq": "Multiple daily",
+      "cycle": "As directed",
+      "low": 50,
+      "med": 100,
+      "high": 200,
+      "f": 21,
+      "wks": 2,
+      "fixed": true,
+      "pros": [
+        "Stimulates natural LH/FSH",
+        "Diagnostic and therapeutic",
+        "Preserves fertility",
+        "Natural hormone restoration",
+        "Can restart HPTA"
+      ],
+      "cons": [
+        "Very short half-life",
+        "Multiple injections daily",
+        "Desensitization risk if continuous",
+        "Requires precise timing",
+        "Less convenient than analogs"
+      ],
+      "warnings": [
+        "Hormone-sensitive tumors: contraindicated",
+        "Pregnancy: contraindicated",
+        "Continuous use: causes suppression",
+        "General: pulsatile required"
+      ],
+      "inst": [
+        "Subcutaneous injection",
+        "Every 2 hours for pulse therapy",
+        "Or continuous pump for fertility",
+        "Short courses (2 weeks max)",
+        "Monitor testosterone and LH/FSH"
+      ]
+    },
+    {
+      "id": "hcg",
+      "name": "HCG (Human Chorionic Gonadotropin)",
+      "category": "LH Mimetic & Fertility",
+      "research": "HCG is FDA approved for fertility treatments and hypogonadism. Structurally similar to LH, it stimulates Leydig cells to produce testosterone and maintains testicular function. Widely used in TRT and PCT protocols.",
+      "mechanism": "HCG binds to LH receptors on Leydig cells in the testes, stimulating testosterone production and maintaining testicular size and function. Unlike exogenous testosterone, it preserves fertility and natural hormone axis while supporting testosterone levels.",
+      "halfLife": "24-36 hours",
+      "freq": "3x weekly",
+      "cycle": "As needed",
+      "low": 250,
+      "med": 500,
+      "high": 1000,
+      "f": 3,
+      "wks": 4,
+      "fixed": true,
+      "pros": [
+        "Preserves fertility on TRT",
+        "Maintains testicular size",
+        "FDA approved",
+        "Widely used and studied",
+        "Natural testosterone stimulation",
+        "Can be used long-term"
+      ],
+      "cons": [
+        "Requires injections",
+        "Estrogen conversion possible",
+        "Less comprehensive than HMG",
+        "Must be kept refrigerated",
+        "Requires prescription"
+      ],
+      "warnings": [
+        "Estrogen: may aromatize",
+        "Hormone-sensitive cancers: avoid",
+        "Pregnancy: contraindicated (fertility drug)",
+        "Testosterone: may elevate into supraphysiological",
+        "General: monitor estradiol"
+      ],
+      "inst": [
+        "Subcutaneous injection",
+        "3 times per week (e.g.",
+        "Mon/Wed/Fri)",
+        "250-500 IU typical maintenance",
+        "Higher doses (1000 IU) for PCT",
+        "Monitor testosterone and estradiol",
+        "Keep refrigerated after reconstitution"
+      ]
+    },
+    {
+      "id": "hexarelin",
+      "name": "Hexarelin",
+      "category": "Most Potent GHRP (Cardioprotective)",
+      "research": "Research shows hexarelin is the most potent GHRP, even stronger than GHRP-2. Unique among GHRPs for cardioprotective effects via activation of CD36 receptors in cardiac tissue. Studies demonstrate protection against ischemia-reperfusion injury.",
+      "mechanism": "Hexarelin binds to GHS-R1a with highest affinity of all GHRPs, producing massive GH release. Additionally, it activates CD36 receptors in the heart, providing cardioprotective effects independent of GH. This dual mechanism makes it unique in the GHRP family.",
+      "halfLife": "45-60 minutes",
+      "freq": "2-3x daily",
+      "cycle": "8 on, 4 off",
+      "low": 1,
+      "med": 1,
+      "high": 2,
+      "f": 21,
+      "wks": 8,
+      "fixed": false,
+      "pros": [
+        "Most potent GHRP available",
+        "Cardioprotective effects (unique to Hexarelin)",
+        "Protects against cardiac ischemia",
+        "Longer half-life than GHRP-2/6",
+        "Enhances cardiac function markers",
+        "Strong muscle-building effects"
+      ],
+      "cons": [
+        "Raises cortisol and prolactin",
+        "Rapid desensitization (requires cycling)",
+        "More expensive than GHRP-2",
+        "Water retention common",
+        "Not suitable for long-term continuous use",
+        "Limited availability compared to other GHRPs"
+      ],
+      "warnings": [
+        "Rapid receptor desensitization - strict cycling required",
+        "Heart conditions: beneficial but consult cardiologist",
+        "High cortisol: adrenal/stress concerns",
+        "Elevated prolactin: gynecomastia risk",
+        "Cancer: standard GH precautions"
+      ],
+      "inst": [
+        "Most potent - start with lower dose",
+        "Cycle strictly: 8 weeks on",
+        "4 weeks minimum off",
+        "Cardioprotective benefits require consistent use",
+        "Subcutaneous or intramuscular both effective",
+        "Best stacked with GHRH for amplified GH release"
+      ]
+    },
+    {
+      "id": "hgh",
+      "name": "HGH (Human Growth Hormone)",
+      "category": "Exogenous Growth Hormone",
+      "research": "Synthetic human growth hormone (somatropin) is FDA approved for GH deficiency, muscle wasting, and short bowel syndrome. Decades of clinical use with established protocols. Direct GH administration vs stimulating natural production.",
+      "mechanism": "Exogenous HGH directly elevates circulating growth hormone and IGF-1 levels without relying on pituitary function. It binds to GH receptors throughout the body, promoting anabolism, lipolysis, and anti-aging effects. Bypasses natural regulatory mechanisms.",
+      "halfLife": "2-4 hours (IV)",
+      "freq": "Daily",
+      "cycle": "6 months minimum",
+      "low": 1,
+      "med": 2,
+      "high": 4,
+      "f": 7,
+      "wks": 24,
+      "fixed": true,
+      "pros": [
+        "FDA approved for deficiency",
+        "Decades of clinical data",
+        "Predictable dosing and effects",
+        "Multiple approved indications",
+        "Standardized pharmaceutical grade"
+      ],
+      "cons": [
+        "Expensive",
+        "Daily injections required",
+        "Suppresses natural production",
+        "Side effect profile well-documented",
+        "Requires prescription (controlled substance)"
+      ],
+      "warnings": [
+        "IGF-1 elevation: cancer risk",
+        "Water retention: dose dependent",
+        "Carpal tunnel: common at higher doses",
+        "Insulin resistance: monitor glucose",
+        "Pregnancy: contraindicated",
+        "Acromegaly: risk at high doses"
+      ],
+      "inst": [
+        "Subcutaneous injection daily",
+        "Morning dosing (mimics natural pulse)",
+        "Rotate injection sites",
+        "Monitor IGF-1 levels quarterly",
+        "Minimum 6-month commitment for benefits",
+        "Requires physician supervision"
+      ]
+    },
+    {
+      "id": "hmg",
+      "name": "HMG (Human Menopausal Gonadotropin)",
+      "category": "Fertility & Testosterone Support",
+      "research": "HMG contains both FSH and LH, making it superior to HCG alone for fertility and testosterone production. Used in fertility treatments and post-cycle therapy (PCT) to restore natural testosterone production.",
+      "mechanism": "HMG contains follicle-stimulating hormone (FSH) and luteinizing hormone (LH). FSH stimulates Sertoli cells and sperm production, while LH stimulates Leydig cells to produce testosterone. More comprehensive than HCG which only mimics LH.",
+      "halfLife": "Unknown",
+      "freq": "3x weekly",
+      "cycle": "3-6 weeks",
+      "low": 75,
+      "med": 150,
+      "high": 300,
+      "f": 3,
+      "wks": 4,
+      "fixed": true,
+      "pros": [
+        "Contains both FSH and LH",
+        "Superior to HCG for fertility",
+        "Restores natural testosterone",
+        "Supports sperm production",
+        "Used in fertility clinics worldwide"
+      ],
+      "cons": [
+        "Requires injection",
+        "More expensive than HCG",
+        "Less convenient than HCG",
+        "May cause testicular enlargement (desired but uncomfortable)"
+      ],
+      "warnings": [
+        "Pregnancy: contraindicated (fertility drug)",
+        "Hormone sensitive cancers: avoid",
+        "Ovarian cysts: risk in women",
+        "Testosterone: may aromatize to estrogen",
+        "General: hormone therapy - monitoring required"
+      ],
+      "inst": [
+        "Subcutaneous or IM injection",
+        "3 times per week (every other day)",
+        "Use during PCT or fertility treatment",
+        "Monitor testosterone and estrogen",
+        "Cycle 3-6 weeks maximum"
+      ]
+    },
+    {
+      "id": "melanotan2",
+      "name": "Melanotan II",
+      "category": "Melanogenesis & Libido",
+      "research": "Synthetic analog of alpha-MSH (melanocyte stimulating hormone). Clinical trials for melanoma prevention (increased pigmentation = protection) and sexual dysfunction. FDA has not approved it, but research shows consistent tanning and libido enhancement.",
+      "mechanism": "Melanotan II binds to melanocortin receptors (MC1R for tanning, MC3R/MC4R for sexual function). Activation of MC1R stimulates melanin production in skin. MC3R/MC4R activation in the brain enhances sexual arousal in both men and women through CNS pathways.",
+      "halfLife": "Unknown (hours)",
+      "freq": "Every 2-3 days",
+      "cycle": "Until desired tan achieved",
+      "low": 250,
+      "med": 500,
+      "high": 1000,
+      "f": 3,
+      "wks": 4,
+      "fixed": true,
+      "pros": [
+        "Produces natural-looking tan without sun exposure",
+        "May reduce skin cancer risk (increased melanin)",
+        "Enhances libido in men and women",
+        "Erectile dysfunction benefits studied",
+        "Long-lasting tan once achieved",
+        "Only need maintenance doses after loading"
+      ],
+      "cons": [
+        "Nausea very common initially",
+        "Facial flushing/redness common",
+        "Darkens all moles/freckles (monitor)",
+        "Spontaneous erections in men (can be unwanted)",
+        "Yawning and stretching side effect",
+        "Appetite suppression",
+        "Not FDA approved"
+      ],
+      "warnings": [
+        "Moles: must monitor for changes (melanoma risk)",
+        "Cardiovascular: monitor blood pressure",
+        "Pregnancy: contraindicated",
+        "History of melanoma: absolute contraindication",
+        "Blood pressure: may elevate",
+        "Erections lasting >4 hours: seek medical help"
+      ],
+      "inst": [
+        "Loading phase: 500mcg daily until desired tan (2-3 weeks)",
+        "Maintenance: 500mcg 1-2x per week thereafter",
+        "Subcutaneous injection",
+        "Start LOW to assess nausea (250mcg first dose)",
+        "Sun exposure accelerates tanning once started"
+      ]
+    },
+    {
+      "id": "motsc",
+      "name": "MOTS-C",
+      "category": "Mitochondrial Peptide",
+      "research": "MOTS-C is a mitochondrial-derived peptide encoded by mitochondrial DNA. Discovered in 2015, research shows it regulates metabolism, improves insulin sensitivity, and may protect against metabolic syndrome and age-related decline.",
+      "mechanism": "MOTS-C is imported from mitochondria to nucleus where it regulates gene expression for metabolic homeostasis. It activates AMPK (cellular energy sensor), improving glucose uptake and fatty acid oxidation. Acts as a mitochondrial signaling molecule.",
+      "halfLife": "Unknown",
+      "freq": "2-3x weekly",
+      "cycle": "4 on, 4 off",
+      "low": 5,
+      "med": 10,
+      "high": 15,
+      "f": 3,
+      "wks": 4,
+      "fixed": true,
+      "pros": [
+        "Improves insulin sensitivity",
+        "Enhances cellular energy metabolism",
+        "Activates AMPK (longevity pathway)",
+        "Mitochondrial health support",
+        "May protect against metabolic syndrome",
+        "Research suggests anti-aging effects"
+      ],
+      "cons": [
+        "Very new peptide (discovered 2015)",
+        "Limited human clinical data",
+        "Effects subtle compared to other peptides",
+        "Optimal dosing still being researched",
+        "Expensive for subtle benefits",
+        "Long-term safety unknown"
+      ],
+      "warnings": [
+        "Pregnancy: insufficient data",
+        "Diabetes: may enhance insulin sensitivity (monitor)",
+        "Metabolic disorders: beneficial but monitor",
+        "Autoimmune: unknown interactions",
+        "General caution due to limited data"
+      ],
+      "inst": [
+        "Subcutaneous injection 2-3 times weekly",
+        "Morning dosing may enhance energy metabolism",
+        "Combine with exercise for synergistic AMPK activation",
+        "Cycle 4 weeks on",
+        "4 weeks off",
+        "Consider with other mitochondrial support supplements"
+      ]
+    },
+    {
+      "id": "nadplus",
+      "name": "NAD+ (Nicotinamide Adenine Dinucleotide)",
+      "category": "Cellular Energy & DNA Repair",
+      "research": "NAD+ is an essential coenzyme found in every living cell. Declines 50% by age 50. Essential for mitochondrial function, DNA repair via PARP enzymes, and sirtuin activation (longevity genes). IV NAD+ has shown benefits in addiction recovery, chronic fatigue, and anti-aging.",
+      "mechanism": "NAD+ is the oxidized form of nicotinamide adenine dinucleotide. Required for cellular respiration (mitochondrial ATP production), DNA repair enzyme activation (PARPs), and sirtuin deacetylase activity. Higher NAD+ levels support metabolic health, genomic stability, and cellular stress resistance.",
+      "halfLife": "Unknown",
+      "freq": "Daily or 3x weekly",
+      "cycle": "Continuous OK",
+      "low": 500,
+      "med": 1000,
+      "high": 2000,
+      "f": 7,
+      "wks": 12,
+      "fixed": true,
+      "pros": [
+        "Essential coenzyme for cellular energy (ATP production)",
+        "Activates sirtuins (longevity genes)",
+        "Supports DNA repair mechanisms (PARP enzymes)",
+        "Declines with age - supplementation restores levels",
+        "Improves mitochondrial function",
+        "Shown benefits in addiction recovery",
+        "May enhance metabolic health"
+      ],
+      "cons": [
+        "Subcutaneous less common than IV",
+        "Large doses needed (500-2000mcg)",
+        "Effects may take weeks to notice",
+        "Expensive for long-term use",
+        "Oral NR/NMN may be more practical for some",
+        "Individual response varies significantly"
+      ],
+      "warnings": [
+        "Cancer: high NAD+ may theoretically support cancer metabolism",
+        "Autoimmune: immune modulating effects",
+        "Methylation: high doses may deplete methyl groups",
+        "Pregnancy: insufficient data",
+        "General: monitor for excessive energy/stimulation"
+      ],
+      "inst": [
+        "Subcutaneous injection (IV more common but invasive)",
+        "Daily dosing or 3x weekly maintenance",
+        "Morning dosing may improve energy",
+        "Large injection volume - split doses if needed",
+        "Combine with TMG or methyl donors",
+        "Cycling optional but continuous OK"
+      ]
+    },
+    {
+      "id": "pegmgf",
+      "name": "PEG MGF",
+      "category": "Pegylated Mechano Growth Factor",
+      "research": "Mechano Growth Factor (MGF) is the splice variant of IGF-1 produced in response to mechanical stress (training). PEGylation extends its half-life from minutes to days. Research shows enhanced satellite cell activation and muscle repair after damage.",
+      "mechanism": "PEG-MGF activates satellite cells and promotes muscle stem cell proliferation. The PEG (polyethylene glycol) modification prevents degradation and extends circulation time. Works primarily through local autocrine/paracrine mechanisms at muscle tissue level.",
+      "halfLife": "Several days",
+      "freq": "2-3x weekly",
+      "cycle": "4 on, 2 off",
+      "low": 100,
+      "med": 200,
+      "high": 400,
+      "f": 3,
+      "wks": 4,
+      "fixed": true,
+      "pros": [
+        "Activates muscle satellite cells for repair/growth",
+        "Extended half-life vs regular MGF (PEGylation)",
+        "Works locally in trained muscles",
+        "Enhances recovery between training sessions",
+        "Promotes muscle cell nuclei addition",
+        "Lower systemic effects than IGF-1 LR3"
+      ],
+      "cons": [
+        "Intramuscular injection into trained muscle required",
+        "Timing critical: post-workout within hours",
+        "Less potent than IGF-1 LR3",
+        "Research still evolving",
+        "Site-specific effects require strategic injection",
+        "Limited long-term safety data"
+      ],
+      "warnings": [
+        "Cancer: may promote cell proliferation",
+        "Diabetes: monitor glucose (IGF-1 related)",
+        "Heart tissue: theoretical cardiac concerns",
+        "Injection technique: must be intramuscular",
+        "Pregnancy: insufficient data"
+      ],
+      "inst": [
+        "Inject INTO the muscle trained that day",
+        "Timing: within 1-2 hours post-workout optimal",
+        "Intramuscular injection (not subcutaneous)",
+        "Typically 2-3 times per week per muscle group",
+        "Can combine with systemic IGF-1 or GH peptides"
+      ]
+    },
+    {
+      "id": "pt141",
+      "name": "PT-141 (Bremelanotide)",
+      "category": "FDA-Approved Sexual Dysfunction",
+      "research": "FDA approved 2019 for premenopausal women with hypoactive sexual desire disorder (HSDD). Works on melanocortin receptors in CNS unlike Viagra (vascular). Clinical trials show significant improvement in sexual desire and satisfaction.",
+      "mechanism": "PT-141 is a synthetic melanocortin analog that activates MC3R and MC4R receptors in the central nervous system. Unlike PDE5 inhibitors (Viagra), it works on desire pathways in the brain rather than blood flow, addressing psychological/libido aspects of sexual dysfunction.",
+      "halfLife": "2-3 hours",
+      "freq": "As needed (before sexual activity)",
+      "cycle": "As needed",
+      "low": 500,
+      "med": 1000,
+      "high": 1500,
+      "f": 1,
+      "wks": 1,
+      "fixed": true,
+      "pros": [
+        "FDA approved for HSDD in women (2019)",
+        "Works via CNS (brain) not vascular system",
+        "Effective when Viagra/Cialis fail",
+        "Enhances sexual desire",
+        "not just function",
+        "Works in both men and women",
+        "On-demand dosing (not daily)"
+      ],
+      "cons": [
+        "Nausea very common (40% in trials)",
+        "Facial flushing",
+        "Injection required (no oral form)",
+        "Expensive",
+        "FDA approval limited to women (off-label for men)",
+        "Must plan timing (30-60 min onset)"
+      ],
+      "warnings": [
+        "Blood pressure: transient elevation common",
+        "Cardiovascular disease: consult physician",
+        "Nausea: severe in some patients",
+        "Pregnancy: insufficient data",
+        "Kidney/liver disease: use caution",
+        "Alcohol: interaction studies incomplete"
+      ],
+      "inst": [
+        "Inject 30-60 minutes before sexual activity",
+        "Subcutaneous abdominal injection",
+        "Start with 500mcg to assess nausea",
+        "Can increase to 1000-1500mcg if tolerated",
+        "Take with anti-nausea medication if needed",
+        "Effects last 2-4 hours typically"
+      ]
+    },
+    {
+      "id": "retatrutide",
+      "name": "Retatrutide",
+      "category": "Triple Hormone Agonist",
+      "research": "Phase 3 trials show up to 24% weight loss - highest of any obesity medication. Triple agonist targeting GLP-1, GIP, and glucagon receptors. Creates thermogenic effect alongside appetite suppression.",
+      "mechanism": "Retatrutide activates three receptors: GLP-1 (satiety/glucose), GIP (insulin secretion/enhancement), and glucagon (energy expenditure/lipolysis). The glucagon component adds thermogenic fat burning not seen in dual agonists, creating unprecedented weight loss.",
+      "halfLife": "~1 week",
+      "freq": "Weekly",
+      "cycle": "Continuous",
+      "low": 100,
+      "med": 400,
+      "high": 800,
+      "f": 1,
+      "wks": 24,
+      "fixed": true,
+      "pros": [
+        "Most potent weight loss peptide (24% in trials)",
+        "Triple mechanism with thermogenic component",
+        "Once weekly dosing",
+        "Superior to both Semaglutide and Tirzepatide",
+        "Preserves lean muscle better than predecessors",
+        "Revolutionary approach to obesity"
+      ],
+      "cons": [
+        "Very new - limited long-term safety data",
+        "Heart rate elevation common",
+        "GI side effects (nausea",
+        "vomiting)",
+        "Most expensive option",
+        "Availability limited initially",
+        "Requires cardiac monitoring"
+      ],
+      "warnings": [
+        "Heart rate: sustained elevation requires monitoring",
+        "Thyroid cancer: same GLP-1 class precautions",
+        "Cardiovascular: history requires cardiologist clearance",
+        "MEN2: contraindicated",
+        "Pregnancy: discontinue",
+        "Gallbladder: pancreatitis risk"
+      ],
+      "inst": [
+        "Week 1-4: 1mg weekly",
+        "Week 5-8: 2mg weekly",
+        "Week 9-12: 4mg weekly",
+        "Week 13+: 8-12mg weekly (therapeutic)",
+        "Monitor resting heart rate - elevation expected",
+        "Cardiovascular clearance recommended before starting"
+      ]
+    },
+    {
+      "id": "sermorelin",
+      "name": "Sermorelin",
+      "category": "FDA-Approved GH Therapy",
+      "research": "FDA-approved since 1997 with extensive safety data. Clinical trials show restoration of youthful GH levels in adults with GH deficiency. Unlike exogenous GH, sermorelin preserves the natural pulsatile pattern and negative feedback loops, making it safer long-term.",
+      "mechanism": "Sermorelin is a synthetic analog of GHRH (1-29 amino acids) that stimulates the pituitary to produce and release endogenous GH. It preserves the body\\",
+      "halfLife": "12 minutes",
+      "freq": "Daily bedtime",
+      "cycle": "Continuous OK",
+      "low": 100,
+      "med": 200,
+      "high": 300,
+      "f": 7,
+      "wks": 12,
+      "fixed": true,
+      "pros": [
+        "FDA approved for GH deficiency (1997)",
+        "Safest GH secretagogue option available",
+        "Preserves natural GH pulsatility",
+        "Maintains negative feedback (cant overdose)",
+        "Less expensive than HGH injections",
+        "Can be used continuously without losing effectiveness"
+      ],
+      "cons": [
+        "Daily injection required",
+        "Must be administered at bedtime for optimal results",
+        "Very short half-life (12 minutes)",
+        "Takes 3-6 months to see full effects",
+        "Less dramatic results than synthetic GH"
+      ],
+      "warnings": [
+        "None known - considered safest GH option",
+        "Pregnancy: consult physician",
+        "Hypothyroidism: may need dose adjustment",
+        "Cancer history: standard precautions apply"
+      ],
+      "inst": [
+        "BEDTIME INJECTION ONLY (mimics natural GH pulse)",
+        "Subcutaneous injection in abdominal fat",
+        "Rotate injection sites to prevent lipodystrophy",
+        "Effects cumulative - commit to 3+ months",
+        "Can be combined with Ipamorelin for enhanced effect"
+      ]
+    },
+    {
+      "id": "tb500",
+      "name": "TB 500",
+      "category": "Healing & Recovery",
+      "research": "Thymosin Beta-4 has been extensively studied in clinical trials for wound healing and cardiac repair. FDA has granted orphan drug status for TB-4 in epidermolysis bullosa. Research shows it accelerates keratinocyte migration and promotes actin polymerization in healing tissues.",
+      "mechanism": "TB-500 binds to actin monomers, promoting cell migration and tissue regeneration. It regulates G-actin/F-actin ratios, enabling cellular mobility critical for wound closure. Additionally, it upregulates vascular endothelial growth factor and promotes stem cell differentiation.",
+      "halfLife": "Long (days)",
+      "freq": "2x weekly",
+      "cycle": "6 on, 4 off",
+      "low": 5,
+      "med": 7,
+      "high": 10,
+      "f": 2,
+      "wks": 6,
+      "fixed": false,
+      "pros": [
+        "Systemic healing effects throughout body",
+        "Only 2 injections per week required",
+        "Promotes stem cell migration and differentiation",
+        "Improves flexibility and reduces tissue fibrosis",
+        "Shown cardioprotective effects in animal studies",
+        "Effective for chronic injuries unresponsive to other treatments"
+      ],
+      "cons": [
+        "Requires loading phase for optimal results",
+        "More expensive than BPC-157",
+        "Headache reported in some users",
+        "Redness at injection site common",
+        "Slower onset compared to BPC-157"
+      ],
+      "warnings": [
+        "Active malignancy: promotes cell proliferation",
+        "Heart conditions: monitor if cardiac issues present",
+        "Cancer history: discuss with oncologist",
+        "Pregnancy: insufficient safety data"
+      ],
+      "inst": [
+        "Loading phase: 7.5mg (1.5 vials) split over first week",
+        "Maintenance: 5mg twice weekly subcutaneously",
+        "Any fatty area acceptable (abdomen",
+        "thigh",
+        "glute)",
+        "Best stacked with BPC-157 for acute injuries",
+        "Can continue longer cycles with 4-week breaks"
+      ]
+    },
+    {
+      "id": "tesamorelin",
+      "name": "Tesamorelin",
+      "category": "FDA-Approved Fat Reducer",
+      "research": "FDA approved (2010) specifically for HIV-associated lipodystrophy. Clinical trials showed significant reduction in visceral adipose tissue (VAT) by 18% over 26 weeks. Also improves triglycerides and cholesterol markers. Only peptide specifically indicated for abdominal fat reduction.",
+      "mechanism": "Tesamorelin is a synthetic GHRH analog that stimulates endogenous GH production. It specifically targets visceral fat through enhanced lipolysis and improved metabolic function. The peptide also improves lipid profiles and may enhance insulin sensitivity.",
+      "halfLife": "30-60 minutes",
+      "freq": "Daily",
+      "cycle": "12 on, 4 off",
+      "low": 1,
+      "med": 2,
+      "high": 2,
+      "f": 7,
+      "wks": 12,
+      "fixed": true,
+      "pros": [
+        "FDA approved for visceral fat reduction",
+        "Targets stubborn belly fat specifically",
+        "Improves triglycerides and HDL cholesterol",
+        "18% reduction in visceral adipose tissue in trials",
+        "Also increases IGF-1 for anabolic benefits",
+        "Better tolerated than synthetic GH"
+      ],
+      "cons": [
+        "Daily injection required",
+        "Injection site reactions common (redness",
+        "itching)",
+        "Most expensive GH secretagogue",
+        "Joint pain reported in some users",
+        "May cause fluid retention initially"
+      ],
+      "warnings": [
+        "Active malignancy: strictly contraindicated",
+        "Pregnancy/breastfeeding: contraindicated",
+        "Hypothyroidism: requires monitoring",
+        "Diabetes: monitor glucose levels",
+        "HIV patients: specifically studied population"
+      ],
+      "inst": [
+        "Subcutaneous injection in abdominal area (target zone)",
+        "Bedtime preferred but morning also acceptable",
+        "Monitor injection sites for reactions",
+        "Combine with diet/exercise for optimal VAT reduction",
+        "Regular monitoring of IGF-1 and glucose recommended"
+      ]
+    },
+    {
+      "id": "thymalin",
+      "name": "Thymalin",
+      "category": "Thymus & Immune Support",
+      "research": "Thymalin is a synthetic version of thymic peptide originally isolated from calf thymus. Russian research over decades shows immune system modulation and potential lifespan extension. Particularly studied in elderly for immune restoration.",
+      "mechanism": "Thymalin regulates T-cell differentiation and maturation by mimicking natural thymic hormones. It restores thymic function which declines with age (thymic involution), supporting naive T-cell production and immune surveillance against pathogens and abnormal cells.",
+      "halfLife": "Unknown",
+      "freq": "Daily",
+      "cycle": "10 days every 6 months",
+      "low": 5,
+      "med": 10,
+      "high": 20,
+      "f": 7,
+      "wks": 2,
+      "fixed": true,
+      "pros": [
+        "Restores thymic function in aging",
+        "Supports T-cell maturation",
+        "Immune system modulation",
+        "Decades of Russian research",
+        "Shown potential lifespan extension",
+        "May enhance vaccine responses in elderly",
+        "Short course (10 days) twice yearly"
+      ],
+      "cons": [
+        "Limited Western clinical trials",
+        "Effects on healthy immune system unclear",
+        "Requires consistent cycling protocol",
+        "Subtle effects (not dramatic like GH peptides)",
+        "Optimal dosing schedule debated",
+        "Often combined with Epitalon for synergy"
+      ],
+      "warnings": [
+        "Autoimmune conditions: may theoretically worsen",
+        "Transplant patients: immune effects concerning",
+        "Pregnancy: insufficient data",
+        "Immune disorders: consult immunologist",
+        "Active infections: timing considerations"
+      ],
+      "inst": [
+        "Standard protocol: 10mg daily for 10 days",
+        "Repeat every 6 months",
+        "Often stacked with Epitalon for longevity synergy",
+        "Subcutaneous injection",
+        "Best in morning on empty stomach"
+      ]
+    },
+    {
+      "id": "tirzepatide",
+      "name": "Tirzepatide",
+      "category": "Dual GIP/GLP-1 Agonist",
+      "research": "SURPASS trials show 20%+ weight loss, superior to Semaglutide. Dual mechanism targeting both GIP and GLP-1 receptors. FDA approved 2022 for diabetes, 2023 for obesity. Faster and greater weight loss than single-hormone approaches.",
+      "mechanism": "Tirzepatide is the first dual GIP/GLP-1 receptor agonist. GIP (glucose-dependent insulinotropic polypeptide) enhances GLP-1 effects. Combined action provides superior glucose control, appetite suppression, and fat oxidation compared to GLP-1 alone.",
+      "halfLife": "5 days (weekly dosing)",
+      "freq": "Weekly",
+      "cycle": "Continuous",
+      "low": 250,
+      "med": 500,
+      "high": 750,
+      "f": 1,
+      "wks": 20,
+      "fixed": true,
+      "pros": [
+        "More potent than Semaglutide (20%+ weight loss)",
+        "Dual mechanism (GIP + GLP-1)",
+        "Faster onset of weight reduction",
+        "Better glycemic control than GLP-1 alone",
+        "Once weekly injection",
+        "Improved lipid profiles"
+      ],
+      "cons": [
+        "More GI side effects than Semaglutide",
+        "Nausea",
+        "vomiting",
+        "diarrhea common",
+        "Higher cost than Semaglutide",
+        "Requires gradual dose escalation",
+        "Injection site reactions reported",
+        "Newer: less long-term safety data"
+      ],
+      "warnings": [
+        "Thyroid cancer: same precautions as other GLP-1s",
+        "MEN2: absolute contraindication",
+        "Pancreatitis: history requires monitoring",
+        "Gallbladder: increased risk",
+        "Gastroparesis: may worsen",
+        "Pregnancy: discontinue"
+      ],
+      "inst": [
+        "Week 1-4: 2.5mg weekly",
+        "Week 5-8: 5mg weekly",
+        "Week 9-12: 7.5mg weekly",
+        "Week 13+: 10-15mg weekly (max)",
+        "Subcutaneous injection weekly",
+        "Monitor for GI tolerance at each escalation"
+      ]
+    }
+  ]
+}

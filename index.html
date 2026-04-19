@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phenom Vital Labs | Peptide Calculator (Refactored)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="brand-text"><span>Phenom</span> Vital Labs</div>
+            <div class="verified"><span class="verified-dot"></span>99%+ Purity</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="intro">
+            <h1>Peptide Calculator</h1>
+            <p>Generate personalized dosing protocols based on clinical research</p>
+        </div>
+
+        <div class="card">
+            <div class="form-title">Configuration</div>
+            <div class="form-grid">
+                <div class="form-field">
+                    <label><span class="label-icon">🔬</span> Peptide</label>
+                    <select id="peptide">
+                        <option value="">Search or select...</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label><span class="label-icon">⚖️</span> Body Weight</label>
+                    <select id="weight">
+                        <option value="">Select weight...</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label><span class="label-icon">🎂</span> Age</label>
+                    <select id="age">
+                        <option value="">Select age...</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label><span class="label-icon">💉</span> Vial Size</label>
+                    <select id="vialSize">
+                        <option value="2">2mg</option>
+                        <option value="5" selected>5mg</option>
+                        <option value="10">10mg</option>
+                        <option value="15">15mg</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label><span class="label-icon">📐</span> Syringe</label>
+                    <select id="syringe">
+                        <option value="30">0.3ml (30 unit)</option>
+                        <option value="50">0.5ml (50 unit)</option>
+                        <option value="100" selected>1ml (100 unit)</option>
+                    </select>
+                </div>
+            </div>
+            <button class="btn" id="calculateBtn">
+                <svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
+                Generate Protocol
+            </button>
+        </div>
+
+        <div class="results" id="results">
+            <!-- Results will be populated by JavaScript -->
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

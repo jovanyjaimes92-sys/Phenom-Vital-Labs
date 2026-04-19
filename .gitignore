@@ -1,0 +1,28 @@
+# Test files
+test-*.js
+test-*.html
+verify-*.js
+trace-*.js
+
+# Scripts used for extraction
+scripts/
+extract_*.js
+
+# Original files (keep for reference but don't commit)
+pdf-compact*.txt
+pdf-compact.html
+pdf-function.js
+index-original.html
+index-refactored.html
+
+# Documentation that lives elsewhere
+REVIEW*.md
+PROJECT_BRIEF.md
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

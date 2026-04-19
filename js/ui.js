@@ -4,6 +4,94 @@
  */
 
 /**
+ * Get timing recommendation based on peptide category
+ * @param {Object} peptide - Peptide object
+ * @returns {string} Timing recommendation
+ */
+function getTimingRecommendation(peptide) {
+    const cat = peptide.category.toLowerCase();
+    const name = peptide.name.toLowerCase();
+    
+    // GH-related peptides - best at night
+    if (cat.includes('gh') || cat.includes('growth') || 
+        name.includes('cjc') || name.includes('ipa') || 
+        name.includes('sermorelin') || name.includes('tesamorelin') ||
+        name.includes('ghrp') || name.includes('mod grf')) {
+        return '**Evening dosing preferred** (aligns with natural GH pulse timing)';
+    }
+    
+    // Fat loss / metabolic - morning best
+    if (cat.includes('fat') || cat.includes('metabolic') || 
+        cat.includes('weight') || name.includes('tesamorelin') ||
+        name.includes('semaglutide') || name.includes('tirzepatide')) {
+        return '**Morning dosing preferred** (enhances daytime metabolism)';
+    }
+    
+    // Healing - morning works well
+    if (cat.includes('heal') || cat.includes('recovery') ||
+        name.includes('bpc') || name.includes('tb-500')) {
+        return '**Morning dosing acceptable** (post-workout ideal for healing)';
+    }
+    
+    // Cognitive - morning
+    if (cat.includes('nootropic') || cat.includes('cognitive') ||
+        name.includes('semax') || name.includes('selank') || name.includes('adamax')) {
+        return '**Morning dosing preferred** (cognitive enhancement during waking hours)';
+    }
+    
+    // Default
+    return '**Take at same time daily** for optimal results';
+}
+
+/**
+ * Get half-life based dosing guidance
+ * @param {string} halfLife - Half-life string from peptide data
+ * @returns {string} Dosing guidance
+ */
+function getHalfLifeGuidance(halfLife) {
+    const hl = halfLife.toLowerCase();
+    
+    // Parse numeric values
+    const dayMatch = hl.match(/~(\d+)\s*day/);
+    const hourMatch = hl.match(/(\d+).*hour/);
+    const minMatch = hl.match(/(\d+).*min/);
+    
+    if (dayMatch) {
+        const days = parseInt(dayMatch[1]);
+        if (days >= 7) {
+            return '**Weekly dosing optimal** - long half-life allows extended intervals';
+        } else if (days >= 3) {
+            return '**2-3x per week possible** - consider consolidating to once daily for simplicity';
+        }
+    }
+    
+    if (hourMatch) {
+        const hours = parseInt(hourMatch[1]);
+        if (hours >= 8) {
+            return '**Once daily dosing ideal** - 8+ hour half-life supports 24-hour coverage';
+        } else if (hours >= 4) {
+            return '**Twice daily optimal** (AM/PM) - 4-8 hour half-life needs 12-hour spacing';
+        } else if (hours >= 2) {
+            return '**Multiple daily doses may be needed** - consider timing with meals/activity';
+        }
+    }
+    
+    if (minMatch) {
+        return '**Short-acting peptide** - requires careful timing; many doses may be simplified to once daily with slight efficacy trade-off';
+    }
+    
+    if (hl.includes('long')) {
+        return '**Once daily or less frequent dosing** - extended duration of action';
+    }
+    
+    if (hl.includes('short') || hl.includes('unknown')) {
+        return '**Standard once daily dosing** is typically effective; exact timing less critical than consistency';
+    }
+    
+    return '**Once daily dosing recommended** where possible for patient compliance';
+}
+
+/**
  * Populate weight dropdown options with smart defaults
  */
 export function populateWeightOptions() {
@@ -522,11 +610,11 @@ export function renderResults(peptide, results, inputs) {
             <div class="clinical-box animate-in" style="animation-delay: 0.95s;">
                 <h4>🩺 Clinical Dosing Notes</h4>
                 <ul class="clinical-list">
-                    <li><strong>Bioavailability:</strong> 40-90% via subcutaneous route</li>
-                    <li><strong>Peak Plasma:</strong> 2-6 hours post-injection</li>
-                    <li><strong>Timing:</strong> Consistent daily timing reduces variability by 15-30%</li>
-                    ${peptide.halfLife && peptide.halfLife !== 'Unknown' ? `<li><strong>Half-Life Guidance:</strong> ${peptide.halfLife.includes('day') || peptide.halfLife.includes('hours') && parseInt(peptide.halfLife) > 8 ? 'Once daily dosing suitable' : peptide.halfLife.includes('min') || (peptide.halfLife.includes('hours') && parseInt(peptide.halfLife) < 4) ? 'Multiple daily doses may be needed' : 'Follow protocol frequency'}</li>` : ''}
-                    <li class="renal-warning">⚠️ <strong>Renal Note:</strong> Patients with impaired kidney function (GFR <60) may require 25-50% dose reduction</li>
+                    <li><strong>Bioavailability:</strong> 40-90% via subcutaneous route | Peak plasma: 2-6 hours post-injection</li>
+                    <li><strong>Volume of Distribution:</strong> Based on weight (${(inputs.weight * 0.45).toFixed(1)}L Vd for ${inputs.weight} lbs) - weight-based dosing improves accuracy</li>
+                    <li><strong>Timing Strategy:</strong> Consistent daily timing reduces variability by 15-30%. ${getTimingRecommendation(peptide)}</li>
+                    ${peptide.halfLife && peptide.halfLife !== 'Unknown' ? `<li><strong>Half-Life Guidance (${peptide.halfLife}):</strong> ${getHalfLifeGuidance(peptide.halfLife)}</li>` : ''}
+                    <li class="renal-warning">⚠️ <strong>Renal Function:</strong> Patients with GFR <60 may require 25-50% dose reduction. Under 5 kDa peptides cleared renally.</li>
                 </ul>
             </div>
             

@@ -620,7 +620,7 @@
       "high": 800,
       "f": 21,
       "wks": 12,
-      "fixed": true,
+      "fixed": false,
       "pros": [
         "More natural GH pulse pattern",
         "Less water retention than DAC version",

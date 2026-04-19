@@ -357,7 +357,9 @@ export function updateVialSizeForPeptide(peptide) {
         'bpc157': [2, 5, 10],
         'ghrp2': [5, 10, 15],
         'tb500': [2, 5, 10],
-        'hcg': [1000, 2000, 5000, 10000]
+        'hcg': [1000, 2000, 5000, 10000],
+        'nad': [100, 250, 500, 1000, 2000],
+        'nadplus': [100, 250, 500, 1000, 2000]
     };
     
     const sizes = peptideSizes[peptide.id];

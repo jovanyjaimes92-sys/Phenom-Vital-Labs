@@ -8,28 +8,27 @@
 /**
  * Calculate metabolic adjustment factor based on age
  * @param {number} age
- * @returns {number} Metabolic factor (0.92 - 1.35)
+ * @returns {number} Metabolic factor (1.0 - 1.5)
  */
 function getMetabolicFactor(age) {
-    if (age < 25) return 0.92;
-    if (age < 30) return 0.96;
-    if (age < 40) return 1.0;
-    if (age < 50) return 1.08;
-    if (age < 60) return 1.18;
-    return 1.28;
+    if (age < 25) return 1.0;
+    if (age < 35) return 1.1;
+    if (age < 45) return 1.2;
+    if (age < 55) return 1.35;
+    return 1.5;
 }
 
 /**
  * Calculate recovery adjustment factor based on age
  * @param {number} age
- * @returns {number} Recovery factor (0.95 - 1.35)
+ * @returns {number} Recovery factor (1.0 - 1.5)
  */
 function getRecoveryFactor(age) {
-    if (age < 30) return 0.95;
-    if (age < 40) return 1.0;
-    if (age < 50) return 1.12;
-    if (age < 60) return 1.25;
-    return 1.35;
+    if (age < 30) return 1.0;
+    if (age < 40) return 1.1;
+    if (age < 50) return 1.25;
+    if (age < 60) return 1.4;
+    return 1.5;
 }
 
 /**

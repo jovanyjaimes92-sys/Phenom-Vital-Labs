@@ -127,25 +127,33 @@ export function populateWeightOptions() {
 }
 
 /**
- * Populate age dropdown options with smart defaults
+ * Populate age dropdown options with age-based dosing factors
  */
 export function populateAgeOptions() {
     const select = document.getElementById('age');
     select.innerHTML = '<option value="">Select age...</option>';
     
-    // Common ages first
-    const commonAges = [25, 30, 35, 40, 45, 50];
-    const optgroup = document.createElement('optgroup');
-    optgroup.label = 'Common';
+    // Age ranges with dosing multipliers
+    const ageOptions = [
+        { age: 25, label: '18-29', factor: '100%' },
+        { age: 35, label: '30-39', factor: '110%' },
+        { age: 45, label: '40-49', factor: '125%' },
+        { age: 55, label: '50-59', factor: '140%' },
+        { age: 65, label: '60+', factor: '150%' }
+    ];
     
-    commonAges.forEach(age => {
+    const optgroup = document.createElement('optgroup');
+    optgroup.label = 'Age (Dose Factor)';
+    
+    ageOptions.forEach(opt => {
         const option = document.createElement('option');
-        option.value = age;
-        option.textContent = `${age} years`;
-        if (age === 35) option.selected = true; // Default
+        option.value = opt.age;
+        option.textContent = `${opt.label} (${opt.factor})`;
+        if (opt.age === 35) option.selected = true; // Default
         optgroup.appendChild(option);
     });
     select.appendChild(optgroup);
+}
     
     // All ages
     const allGroup = document.createElement('optgroup');

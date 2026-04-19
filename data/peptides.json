@@ -1852,7 +1852,7 @@
       "cycle": "12 on, 4 off",
       "low": 1,
       "med": 2,
-      "high": 2,
+      "high": 2.5,
       "f": 7,
       "wks": 12,
       "fixed": true,

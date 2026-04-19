@@ -213,7 +213,34 @@ export function generatePDF(peptide, results, inputs, previewMode = false) {
         });
     });
     
-    // WARNINGS (if any)
+    // CLINICAL DOSING NOTES BOX
+    y += 38;
+    doc.setFillColor(250, 250, 250);
+    doc.setDrawColor(200, 200, 200);
+    doc.roundedRect(margin, y, contentWidth, 22, 3, 3, 'FD');
+    
+    doc.setTextColor(...primaryBlue);
+    doc.setFontSize(8);
+    doc.setFont('helvetica', 'bold');
+    doc.text('CLINICAL NOTES', margin + 5, y + 6);
+    
+    doc.setTextColor(...gray);
+    doc.setFontSize(7);
+    doc.setFont('helvetica', 'normal');
+    doc.text('• Bioavailability: 40-90% via subcutaneous route', margin + 5, y + 12);
+    doc.text('• Peak plasma: 2-6 hours post-injection', margin + 5, y + 17);
+    
+    // Timing note based on frequency
+    let timingNote = '';
+    if (peptide.f === 1) timingNote = '• Take same time daily for 15-30% less variability';
+    else if (peptide.f >= 14) timingNote = '• Multiple daily doses: space evenly throughout day';
+    else timingNote = '• Consistent timing improves dose-response predictability';
+    doc.text(timingNote, contentWidth / 2 + margin, y + 12);
+    
+    // Half-life guidance
+    doc.text(`• Half-life: ${peptide.halfLife || 'See research'}`, contentWidth / 2 + margin, y + 17);
+
+    // RENAL WARNING (if applicable)
     if (peptide.warnings && peptide.warnings.length > 0) {
         y += 44;
         doc.setFillColor(254, 242, 242);

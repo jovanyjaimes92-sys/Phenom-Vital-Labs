@@ -518,6 +518,18 @@ export function renderResults(peptide, results, inputs) {
                 <p>${peptide.mechanism}</p>
             </div>
             
+            <!-- Clinical Notes -->
+            <div class="clinical-box animate-in" style="animation-delay: 0.95s;">
+                <h4>🩺 Clinical Dosing Notes</h4>
+                <ul class="clinical-list">
+                    <li><strong>Bioavailability:</strong> 40-90% via subcutaneous route</li>
+                    <li><strong>Peak Plasma:</strong> 2-6 hours post-injection</li>
+                    <li><strong>Timing:</strong> Consistent daily timing reduces variability by 15-30%</li>
+                    ${peptide.halfLife && peptide.halfLife !== 'Unknown' ? `<li><strong>Half-Life Guidance:</strong> ${peptide.halfLife.includes('day') || peptide.halfLife.includes('hours') && parseInt(peptide.halfLife) > 8 ? 'Once daily dosing suitable' : peptide.halfLife.includes('min') || (peptide.halfLife.includes('hours') && parseInt(peptide.halfLife) < 4) ? 'Multiple daily doses may be needed' : 'Follow protocol frequency'}</li>` : ''}
+                    <li class="renal-warning">⚠️ <strong>Renal Note:</strong> Patients with impaired kidney function (GFR <60) may require 25-50% dose reduction</li>
+                </ul>
+            </div>
+            
             <!-- Protocol -->
             <div class="protocol-box animate-in" style="animation-delay: 1s;">
                 <h3>📋 Administration Instructions</h3>

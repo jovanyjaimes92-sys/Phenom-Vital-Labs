@@ -321,12 +321,12 @@
       "research": "Pre-mixed blend: CJC-1295 NO DAC 5mg + Ipamorelin 5mg per vial. Combines pulsatile GH release of Mod GRF with selective GHRP action of Ipamorelin.",
       "mechanism": "Dual mechanism: CJC NO DAC creates pulsatile GH elevation via GHRH stimulation. Ipamorelin adds selective ghrelin receptor activation without cortisol/prolactin elevation. Together they optimize GH secretion patterns.",
       "halfLife": "Mixed (30min + 2hrs)",
-      "freq": "2-3x daily",
+      "freq": "Daily (before bed)",
       "cycle": "12 on, 4 off",
       "low": 0.2,
       "med": 0.3,
       "high": 0.5,
-      "f": 21,
+      "f": 7,
       "wks": 12,
       "fixed": true,
       "pros": [
@@ -336,7 +336,7 @@
         "No cortisol/prolactin elevation (Ipamorelin component)"
       ],
       "cons": [
-        "Multiple daily injections required",
+        "Daily injection required",
         "Must dose on empty stomach"
       ],
       "warnings": [
@@ -346,8 +346,8 @@
       "inst": [
         "Contains 5mg CJC-1295 NO DAC + 5mg Ipamorelin (10mg total)",
         "Typical dose: 300mcg (0.3mg) of each peptide per injection",
-        "Inject 2-3 times daily on empty stomach",
-        "Morning, pre-workout, and bedtime ideal",
+        "Inject once daily before bed on empty stomach",
+        "Evening dosing optimal for natural GH pulse timing",
         "Empty stomach: wait 30 min after injection before eating"
       ]
     },

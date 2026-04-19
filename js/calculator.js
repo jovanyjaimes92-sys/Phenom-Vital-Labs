@@ -138,8 +138,8 @@ export function calculateSyringeUnits(peptide, doseAmount, vialSizeMg = 5, syrin
     
     let units = Math.round(mlNeeded * unitsPerMl);
     
-    // Add 4U to standard dose for mg peptides
-    if ((isBlend || peptide.fixed) && level === 'med') {
+    // Add 4U to ALL doses for mg peptides (blends and fixed-dose)
+    if (isBlend || peptide.fixed) {
         units += 4;
     }
     

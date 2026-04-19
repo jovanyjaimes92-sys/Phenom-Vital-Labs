@@ -537,6 +537,17 @@ export function renderResults(peptide, results, inputs) {
                 </div>
             </div>
             
+            <!-- Visual Syringe Guide -->
+            <div class="syringe-visual animate-in" style="animation-delay: 0.45s;">
+                <h4 style="text-align: center; margin-bottom: 20px; color: var(--primary); font-size: 1rem;">
+                    💉 Syringe Draw Guide (Standard Dose)
+                </h4>
+                ${generateSyringeSVG(results.syringeUnits.med, inputs.syringe)}
+                <p style="text-align: center; margin-top: 16px; color: var(--muted); font-size: 0.9rem;">
+                    Pull to <strong style="color: var(--primary); font-size: 1.2rem;">${results.syringeUnits.med} units</strong> on ${inputs.syringe}U syringe for ${formatDose(results.doses.med)}${unitLabel} dose
+                </p>
+            </div>
+            
             <!-- Info Grid -->
             <div class="info-grid animate-in" style="animation-delay: 0.5s;">
                 <div class="info-card">
@@ -730,5 +741,106 @@ style.textContent = `
         font-size: 0.75rem;
         margin-top: 4px;
     }
-`;
+    
+    .syringe-container {
+        background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+        border-radius: 16px;
+        border: 2px solid #e2e8f0;
+        margin: 20px 0;
+    }
+    
+    .syringe-container svg {
+        filter: drop-shadow(0 4px 12px rgba(30, 64, 175, 0.15));
+    }
+`
 document.head.appendChild(style);
+
+/**
+ * Generate SVG syringe visualization
+ * @param {number} units - Units to draw
+ * @param {number} syringeSize - Syringe size (30, 50, or 100)
+ * @returns {string} SVG HTML
+ */
+function generateSyringeSVG(units, syringeSize) {
+    const width = 400;
+    const height = 120;
+    const barrelY = 40;
+    const barrelHeight = 40;
+    const barrelStartX = 60;
+    const barrelWidth = 280;
+    const endX = barrelStartX + barrelWidth;
+    const plungerX = barrelStartX + (units / syringeSize) * barrelWidth;
+    
+    // Calculate label positions
+    const maxLabel = syringeSize;
+    const steps = syringeSize <= 30 ? 5 : 10;
+    
+    let ticks = '';
+    let labels = '';
+    for (let i = 0; i <= maxLabel; i += steps) {
+        const x = barrelStartX + (i / maxLabel) * barrelWidth;
+        ticks += `<line x1="${x}" y1="${barrelY}" x2="${x}" y2="${barrelY + barrelHeight}" stroke="#cbd5e1" stroke-width="1"/>`;
+        labels += `<text x="${x}" y="${barrelY + barrelHeight + 18}" text-anchor="middle" font-size="11" fill="#64748b">${i}</text>`;
+    }
+    
+    // Fill color based on how full
+    const fillPercent = units / syringeSize;
+    let fillColor = '#3b82f6'; // blue
+    if (fillPercent > 0.75) fillColor = '#f59e0b'; // orange warning
+    if (fillPercent > 0.9) fillColor = '#ef4444'; // red warning
+    
+    return `
+    <div class="syringe-container" style="display: flex; justify-content: center; padding: 20px;">
+        <svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" style="max-width: 100%;">
+            <!-- Syringe barrel outline -->
+            <rect x="${barrelStartX}" y="${barrelY}" width="${barrelWidth}" height="${barrelHeight}" 
+                  fill="#f8fafc" stroke="#1e40af" stroke-width="3" rx="4"/>
+            
+            <!-- Ticks -->
+            ${ticks}
+            
+            <!-- Labels -->
+            ${labels}
+            
+            <!-- Liquid fill -->
+            <rect x="${barrelStartX + 2}" y="${barrelY + 2}" 
+                  width="${Math.max(0, plungerX - barrelStartX - 4)}" height="${barrelHeight - 4}" 
+                  fill="${fillColor}" opacity="0.8" rx="2"/>
+            
+            <!-- Plunger -->
+            <rect x="${plungerX - 2}" y="${barrelY - 5}" width="4" height="${barrelHeight + 10}" 
+                  fill="#1e3a8a" rx="2"/>
+            <rect x="${plungerX - 8}" y="${barrelY - 8}" width="16" height="4" 
+                  fill="#1e3a8a" rx="2"/>
+            
+            <!-- Plunger rod -->
+            <rect x="${plungerX - 2}" y="${barrelY - 35}" width="4" height="30" 
+                  fill="#64748b"/>
+            
+            <!-- Thumb rest -->
+            <rect x="${plungerX - 12}" y="${barrelY - 38}" width="24" height="6" 
+                  fill="#1e3a8a" rx="3"/>
+            
+            <!-- Needle tip -->
+            <polygon points="${endX},${barrelY + 15} ${endX + 15},${barrelY + 20} ${endX},${barrelY + 25}" 
+                     fill="#94a3b8"/>
+            
+            <!-- Measurement indicator -->
+            <line x1="${plungerX}" y1="${barrelY - 45}" x2="${plungerX}" y2="${barrelY - 50}" 
+                  stroke="#1e40af" stroke-width="2"/>
+            <text x="${plungerX}" y="${barrelY - 55}" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e40af">
+                ${units}
+            </text>
+            <text x="${plungerX}" y="${barrelY - 42}" text-anchor="middle" font-size="10" fill="#64748b">
+                units
+            </text>
+            
+            <!-- Syringe label -->
+            <text x="${barrelStartX + barrelWidth/2}" y="${barrelY + barrelHeight/2 + 5}" 
+                  text-anchor="middle" font-size="10" fill="#94a3b8" opacity="0.7">
+                ${syringeSize}U Insulin Syringe
+            </text>
+        </svg>
+    </div>
+    `;
+}

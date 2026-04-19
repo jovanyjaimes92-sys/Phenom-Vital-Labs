@@ -500,8 +500,13 @@ export function renderResults(peptide, results, inputs) {
                         <div class="dose-detail">${unitLabel}${isFixed ? ' <span style="font-size:0.75em;color:var(--muted)">(' + (results.doses.low * 1000).toFixed(0) + ' mcg)</span>' : ''}</div>
                     </div>
                     <div class="draw-box">
-                        <div class="draw-label">Draw ${results.syringeUnits.low} units</div>
-                        <div class="draw-hint">on ${inputs.syringe}U syringe</div>
+                        <div class="draw-label">
+                            ${results.syringeUnits.low > inputs.syringe ? 
+                                `<span style="color: #dc2626; font-weight: 600;">⚠️ Requires ${results.syringeUnits.low}U total</span>` : 
+                                `Draw ${results.syringeUnits.low} units`
+                            }
+                        </div>
+                        <div class="draw-hint">${results.syringeUnits.low > inputs.syringe ? `(draw ${Math.ceil(results.syringeUnits.low/inputs.syringe)}x on ${inputs.syringe}U syringe)` : `on ${inputs.syringe}U syringe`}</div>
                     </div>
                     <div class="dose-hint">Best for first-time users</div>
                 </div>
@@ -515,8 +520,13 @@ export function renderResults(peptide, results, inputs) {
                         <div class="dose-detail">${unitLabel}${isFixed ? ' <span style="font-size:0.75em;color:var(--muted)">(' + (results.doses.med * 1000).toFixed(0) + ' mcg)</span>' : ''}</div>
                     </div>
                     <div class="draw-box">
-                        <div class="draw-label">Draw ${results.syringeUnits.med} units</div>
-                        <div class="draw-hint">on ${inputs.syringe}U syringe</div>
+                        <div class="draw-label">
+                            ${results.syringeUnits.med > inputs.syringe ? 
+                                `<span style="color: #dc2626; font-weight: 600;">⚠️ Requires ${results.syringeUnits.med}U total</span>` : 
+                                `Draw ${results.syringeUnits.med} units`
+                            }
+                        </div>
+                        <div class="draw-hint">${results.syringeUnits.med > inputs.syringe ? `(draw ${Math.ceil(results.syringeUnits.med/inputs.syringe)}x on ${inputs.syringe}U syringe)` : `on ${inputs.syringe}U syringe`}</div>
                     </div>
                 </div>
                 
@@ -528,8 +538,13 @@ export function renderResults(peptide, results, inputs) {
                         <div class="dose-detail">${unitLabel}${isFixed ? ' <span style="font-size:0.75em;color:var(--muted)">(' + (results.doses.high * 1000).toFixed(0) + ' mcg)</span>' : ''}</div>
                     </div>
                     <div class="draw-box">
-                        <div class="draw-label">Draw ${results.syringeUnits.high} units</div>
-                        <div class="draw-hint">on ${inputs.syringe}U syringe</div>
+                        <div class="draw-label">
+                            ${results.syringeUnits.high > inputs.syringe ? 
+                                `<span style="color: #dc2626; font-weight: 600;">⚠️ Requires ${results.syringeUnits.high}U total</span>` : 
+                                `Draw ${results.syringeUnits.high} units`
+                            }
+                        </div>
+                        <div class="draw-hint">${results.syringeUnits.high > inputs.syringe ? `(draw ${Math.ceil(results.syringeUnits.high/inputs.syringe)}x on ${inputs.syringe}U syringe)` : `on ${inputs.syringe}U syringe`}</div>
                     </div>
                     <div class="dose-hint">For experienced users</div>
                 </div>

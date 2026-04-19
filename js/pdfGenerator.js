@@ -142,23 +142,21 @@ export function generatePDF(peptide, results, inputs, previewMode = false) {
         doc.setFontSize(isRec ? 20 : 16);
         doc.setFont('helvetica', 'bold');
         
-        // Format dose display
-        let doseDisplay;
+        // Format dose display - show BOTH mg and mcg for fixed doses
         if (isFixed) {
-            // For mg, show as mg directly
-            if (dose < 1) {
-                doseDisplay = (dose * 1000).toFixed(0);
-                doc.text(doseDisplay, x + (colWidth - 4) / 2 - 2, y + 30, { align: 'center' });
-                doc.setFontSize(8);
-                doc.text('mcg', x + (colWidth - 4) / 2 - 2, y + 37, { align: 'center' });
-            } else {
-                doseDisplay = dose.toFixed(1).replace(/\.0$/, '');
-                doc.text(doseDisplay, x + (colWidth - 4) / 2 - 2, y + 30, { align: 'center' });
-                doc.setFontSize(8);
-                doc.text(unit, x + (colWidth - 4) / 2 - 2, y + 37, { align: 'center' });
-            }
+            // For mg, show mg primary and mcg secondary
+            const mgValue = dose.toFixed(2).replace(/\.?0+$/, '');
+            const mcgValue = (dose * 1000).toFixed(0);
+            
+            doc.setFontSize(isRec ? 18 : 14);
+            doc.text(mgValue + ' mg', x + (colWidth - 4) / 2 - 2, y + 28, { align: 'center' });
+            
+            doc.setFontSize(7);
+            doc.setTextColor(isRec ? 220 : gray[0], gray[1], gray[2]);
+            doc.text('(' + mcgValue + ' mcg)', x + (colWidth - 4) / 2 - 2, y + 35, { align: 'center' });
         } else {
-            doseDisplay = dose.toLocaleString();
+            // For mcg, just show mcg
+            const doseDisplay = dose.toLocaleString();
             doc.text(doseDisplay, x + (colWidth - 4) / 2 - 2, y + 30, { align: 'center' });
             doc.setFontSize(8);
             doc.text(unit, x + (colWidth - 4) / 2 - 2, y + 37, { align: 'center' });

@@ -512,7 +512,7 @@ export function renderResults(peptide, results, inputs) {
                     <div class="mcg-box">
                         <div class="mcg-label">Optimal Dose</div>
                         <div class="mcg-value">${formatDose(results.doses.med)}</div>
-                        <div class="dose-detail">${unitLabel}</div>
+                        <div class="dose-detail">${unitLabel}${isFixed ? ' <span style="font-size:0.75em;color:var(--muted)">(' + (results.doses.med * 1000).toFixed(0) + ' mcg)</span>' : ''}</div>
                     </div>
                     <div class="draw-box">
                         <div class="draw-label">Draw ${results.syringeUnits.med} units</div>

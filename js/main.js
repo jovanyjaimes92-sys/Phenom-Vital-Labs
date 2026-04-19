@@ -74,7 +74,7 @@ async function handleCalculate() {
         age,
         peptide: currentPeptide,
         vialSize: parseInt(document.getElementById('vialSize').value),
-        syringe: parseInt(document.getElementById('syringe').value)
+        syringe: 50 // Default to 50U for all calculations
     };
     
     // Validate

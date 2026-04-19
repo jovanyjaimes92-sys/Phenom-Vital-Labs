@@ -543,7 +543,17 @@ export function renderResults(peptide, results, inputs) {
                 </p>
             </div>
             
-            <!-- Info Grid -->
+            <!-- Top PDF Buttons - Easy Access -->
+            <div class="pdf-buttons animate-in" style="display: flex; gap: 12px; margin: 24px 0; animation-delay: 0.35s;">
+                <button class="btn" id="previewPDFTop" style="flex: 1; background: linear-gradient(135deg, var(--primary-light), var(--primary)); box-shadow: 0 4px 12px rgba(30,64,175,0.3);">
+                    <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; margin-right: 8px;"><path fill="currentColor" d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                    👁️ Preview PDF
+                </button>
+                <button class="btn" id="downloadPDFTop" style="flex: 1; box-shadow: 0 4px 12px rgba(30,64,175,0.3);">
+                    <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; margin-right: 8px;"><path fill="currentColor" d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                    ⬇️ Download PDF
+                </button>
+            </div>
             <div class="info-grid animate-in" style="animation-delay: 0.5s;">
                 <div class="info-card">
                     <div class="info-card-icon">⏱️</div>

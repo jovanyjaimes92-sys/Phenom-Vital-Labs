@@ -117,15 +117,24 @@ export function generatePDF(peptide, results, inputs, previewMode = false) {
     doc.setTextColor(0, 0, 0);
     doc.text(`Vial Size: ${isBlend ? inputs.vialSize + 'mg blend' : inputs.vialSize + 'mg'}`, margin + 5, y + 28);
     
-    // DOSING PROTOCOL - Three columns
+    // DOSING PROTOCOL - Three columns with visual enhancements
     y += 38;
     doc.setFillColor(primaryBlue[0], primaryBlue[1], primaryBlue[2]);
     doc.setTextColor(255, 255, 255);
-    doc.setFontSize(10);
+    doc.setFontSize(12);
     doc.setFont('helvetica', 'bold');
-    doc.text('RECOMMENDED DOSING PROTOCOL', margin, y);
+    doc.text('📋 RECOMMENDED DOSING PROTOCOL', margin, y);
     
+    // Add quick reference guide
     y += 8;
+    doc.setFillColor(cream[0], cream[1], cream[2]);
+    doc.setDrawColor(primaryBlue[0], primaryBlue[1], primaryBlue[2]);
+    doc.roundedRect(margin, y, contentWidth, 18, 3, 3, 'FD');
+    doc.setTextColor(primaryBlue[0], primaryBlue[1], primaryBlue[2]);
+    doc.setFontSize(9);
+    doc.text('💡 QUICK REFERENCE: Based on ' + inputs.age + ' years old, ' + inputs.weight + ' lbs | Choose the protocol that matches your experience level', margin + 5, y + 11);
+    
+    y += 22;
     const colWidth = contentWidth / 3;
     
     // Column headers
@@ -274,15 +283,20 @@ export function generatePDF(peptide, results, inputs, previewMode = false) {
         });
     }
     
-    // FOOTER
+    // FOOTER with helpful note
+    const footerY = 275;
     doc.setFillColor(primaryBlue[0], primaryBlue[1], primaryBlue[2]);
-    doc.rect(0, 280, pageWidth, 17, 'F');
+    doc.rect(0, footerY, pageWidth, 22, 'F');
     
     doc.setTextColor(255, 255, 255);
     doc.setFontSize(8);
+    doc.setFont('helvetica', 'bold');
+    doc.text('📄 This protocol was generated on ' + new Date().toLocaleDateString(), pageWidth / 2, footerY + 8, { align: 'center' });
+    
+    doc.setFontSize(7);
     doc.setFont('helvetica', 'normal');
-    doc.text('This protocol is generated for research purposes only. Consult a licensed healthcare provider before use.', pageWidth / 2, 288, { align: 'center' });
-    doc.text('Phenom Vital Labs | phenomvitallabs.com', pageWidth / 2, 293, { align: 'center' });
+    doc.text('For research purposes only. Consult a licensed healthcare provider before use.', pageWidth / 2, footerY + 14, { align: 'center' });
+    doc.text('Phenom Vital Labs | phenomvitallabs.com', pageWidth / 2, footerY + 19, { align: 'center' });
     
     // Either preview or download
     if (previewMode) {

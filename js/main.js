@@ -104,31 +104,35 @@ async function handleCalculate() {
         syringe: inputs.syringe
     });
     
-    // Setup PDF buttons
+    // Setup PDF buttons (both top and bottom)
     const downloadBtn = document.getElementById('downloadPDF');
     const previewBtn = document.getElementById('previewPDF');
+    const downloadBtnTop = document.getElementById('downloadPDFTop');
+    const previewBtnTop = document.getElementById('previewPDFTop');
     
-    if (downloadBtn) {
-        downloadBtn.onclick = () => {
-            generatePDF(currentPeptide, results, {
-                weight: inputs.weight,
-                age: inputs.age,
-                vialSize: inputs.vialSize,
-                syringe: inputs.syringe
-            });
-        };
-    }
+    const generatePDFHandler = () => {
+        generatePDF(currentPeptide, results, {
+            weight: inputs.weight,
+            age: inputs.age,
+            vialSize: inputs.vialSize,
+            syringe: inputs.syringe
+        });
+    };
     
-    if (previewBtn) {
-        previewBtn.onclick = () => {
-            generatePDF(currentPeptide, results, {
-                weight: inputs.weight,
-                age: inputs.age,
-                vialSize: inputs.vialSize,
-                syringe: inputs.syringe
-            }, true); // true = preview mode
-        };
-    }
+    const previewPDFHandler = () => {
+        generatePDF(currentPeptide, results, {
+            weight: inputs.weight,
+            age: inputs.age,
+            vialSize: inputs.vialSize,
+            syringe: inputs.syringe
+        }, true); // true = preview mode
+    };
+    
+    if (downloadBtn) downloadBtn.onclick = generatePDFHandler;
+    if (downloadBtnTop) downloadBtnTop.onclick = generatePDFHandler;
+    
+    if (previewBtn) previewBtn.onclick = previewPDFHandler;
+    if (previewBtnTop) previewBtnTop.onclick = previewPDFHandler;
 }
 
 

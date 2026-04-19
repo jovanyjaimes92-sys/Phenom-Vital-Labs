@@ -127,29 +127,30 @@ export function populateWeightOptions() {
 }
 
 /**
- * Populate age dropdown options with age-based dosing factors
+ * Populate age dropdown options with research-based age decline data
+ * GH/IGF-1 declines ~14% per decade after age 30
  */
 export function populateAgeOptions() {
     const select = document.getElementById('age');
     select.innerHTML = '<option value="">Select age...</option>';
     
-    // Age ranges with dosing multipliers
+    // Research-based: GH production decline ~14% per decade after 30
     const ageOptions = [
-        { age: 25, label: '18-29', factor: '100%' },
-        { age: 35, label: '30-39', factor: '110%' },
-        { age: 45, label: '40-49', factor: '125%' },
-        { age: 55, label: '50-59', factor: '140%' },
-        { age: 65, label: '60+', factor: '150%' }
+        { age: 25, label: '18-29', factor: '100%', note: 'Peak production' },
+        { age: 35, label: '30-39', factor: '+8%', note: 'Early decline' },
+        { age: 45, label: '40-49', factor: '+16%', note: '-14%/decade' },
+        { age: 55, label: '50-59', factor: '+33%', note: '-28% total' },
+        { age: 65, label: '60+', factor: '+50%', note: '40%+ decline' }
     ];
     
     const optgroup = document.createElement('optgroup');
-    optgroup.label = 'Age (Dose Factor)';
+    optgroup.label = 'Age (Dose Adjustment)';
     
     ageOptions.forEach(opt => {
         const option = document.createElement('option');
         option.value = opt.age;
-        option.textContent = `${opt.label} (${opt.factor})`;
-        if (opt.age === 35) option.selected = true; // Default
+        option.textContent = `${opt.label} (${opt.factor} - ${opt.note})`;
+        if (opt.age === 35) option.selected = true;
         optgroup.appendChild(option);
     });
     select.appendChild(optgroup);

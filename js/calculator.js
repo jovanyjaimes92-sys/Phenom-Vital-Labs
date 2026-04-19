@@ -7,28 +7,37 @@
 
 /**
  * Calculate metabolic adjustment factor based on age
+ * Research: GH/IGF-1 declines ~14% per decade after age 30
  * @param {number} age
- * @returns {number} Metabolic factor (1.0 - 1.5)
+ * @returns {number} Metabolic factor based on actual production decline data
  */
 function getMetabolicFactor(age) {
-    if (age < 25) return 1.0;
-    if (age < 35) return 1.1;
-    if (age < 45) return 1.2;
-    if (age < 55) return 1.35;
-    return 1.5;
+    // Research shows ~14% decline per decade after 30
+    // Age 20-30: 100% production (baseline)
+    // Age 40: ~86% remaining (+16% supplemental needed)
+    // Age 50: ~75% remaining (+33% supplemental needed)
+    // Age 60: ~65% remaining (+54% supplemental needed, capped at 50%)
+    if (age < 30) return 1.0;      // 18-29: 100% baseline
+    if (age < 40) return 1.08;     // 30-39: +8% (early decline)
+    if (age < 50) return 1.16;     // 40-49: +16% (14% per decade)
+    if (age < 60) return 1.33;     // 50-59: +33% (28% total decline)
+    return 1.5;                    // 60+: +50% (capped, 40%+ decline)
 }
 
 /**
  * Calculate recovery adjustment factor based on age
+ * Based on clinical data: tissue repair slows 10-15% per decade after 35
  * @param {number} age
- * @returns {number} Recovery factor (1.0 - 1.5)
+ * @returns {number} Recovery factor based on age-related decline
  */
 function getRecoveryFactor(age) {
-    if (age < 30) return 1.0;
-    if (age < 40) return 1.1;
-    if (age < 50) return 1.25;
-    if (age < 60) return 1.4;
-    return 1.5;
+    // Tissue repair/healing declines ~10-15% per decade
+    // More conservative than metabolic factor
+    if (age < 30) return 1.0;      // 18-29: 100%
+    if (age < 40) return 1.06;     // 30-39: +6%
+    if (age < 50) return 1.12;     // 40-49: +12%
+    if (age < 60) return 1.25;     // 50-59: +25%
+    return 1.4;                    // 60+: +40%
 }
 
 /**

@@ -1,1 +1,0 @@
-cd C:\Users\jovis\.openclaw\workspace\phenom-vital-labs && git add js/pdfGenerator.js index.html && git commit -m "Rev 1: Layout and Spacing - Improved header, consistent margins, better card spacing, refined section gaps" --author="Builder <builder@phenomvital.com>"

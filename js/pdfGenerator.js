@@ -1,6 +1,6 @@
 /**
- * PDF Generator Module - Clean Medical Report v7
- * Simple, compact, professional layout
+ * PDF Generator Module - Clean Medical Report v8
+ * With syringe measurements and benefits/cons
  * 
  * @module pdfGenerator
  */
@@ -178,31 +178,49 @@ export function generatePDF(peptide, results, inputs, previewMode = false) {
     
     y += cardH + 8;
     
-    // ===== CALCULATION =====
-    doc.setFillColor(lightGray[0], lightGray[1], lightGray[2]);
-    doc.roundedRect(margin, y, contentW, 22, 3, 3, 'F');
-    
+    // ===== SYRINGE MEASUREMENTS =====
     doc.setTextColor(navy[0], navy[1], navy[2]);
-    doc.setFontSize(7);
+    doc.setFontSize(10);
     doc.setFont('helvetica', 'bold');
-    doc.text('CALCULATION', margin + 5, y + 5);
+    doc.text('SYRINGE MEASUREMENTS', margin, y);
+    y += 6;
     
-    const doseMg = isFixed ? (results.doses?.med || 0) : (results.doses?.med || 0) / 1000;
-    const vialSize = Number(inputs.vialSize) || 5;
-    const conc = vialSize / 3;
-    const ml = doseMg / conc;
+    const syringeData = [
+        ['Conservative', configs[0].units + ' units', configs[0].val + (isFixed ? ' mg' : ' mcg')],
+        ['Standard', configs[1].units + ' units', configs[1].val + (isFixed ? ' mg' : ' mcg')],
+        ['Advanced', configs[2].units + ' units', configs[2].val + (isFixed ? ' mg' : ' mcg')]
+    ];
     
-    doc.setTextColor(slate[0], slate[1], slate[2]);
-    doc.setFontSize(6);
-    doc.setFont('helvetica', 'normal');
-    doc.text(`${vialSize}mg ÷ 3ml = ${conc.toFixed(2)}mg/ml  •  ${doseMg.toFixed(2)}mg ÷ ${conc.toFixed(2)}mg/ml = ${ml.toFixed(2)}ml  •  ${ml.toFixed(2)}ml × 50U = ${Math.round(ml * 50)} units`, margin + 5, y + 12);
+    doc.setFillColor(250, 250, 250);
+    doc.setDrawColor(220, 220, 220);
+    doc.roundedRect(margin, y, contentW, 20, 3, 3, 'FD');
     
-    if (ml * 50 > 50) {
-        doc.setTextColor(red[0], red[1], red[2]);
-        doc.text(`⚠ Requires ${Math.ceil(ml * 50 / 50)} syringe draws`, margin + 5, y + 18);
-    }
+    const colWidth = contentW / 3;
+    syringeData.forEach((row, i) => {
+        const x = margin + (i * colWidth);
+        
+        // Header
+        doc.setFillColor(navy[0], navy[1], navy[2]);
+        doc.roundedRect(x, y, colWidth - 2, 6, 2, 2, 'F');
+        doc.setTextColor(white[0], white[1], white[2]);
+        doc.setFontSize(5);
+        doc.setFont('helvetica', 'bold');
+        doc.text(row[0].toUpperCase(), x + colWidth/2 - 1, y + 4, { align: 'center' });
+        
+        // Units
+        doc.setTextColor(blue[0], blue[1], blue[2]);
+        doc.setFontSize(9);
+        doc.setFont('helvetica', 'bold');
+        doc.text(row[1], x + colWidth/2 - 1, y + 13, { align: 'center' });
+        
+        // Dose
+        doc.setTextColor(slate[0], slate[1], slate[2]);
+        doc.setFontSize(6);
+        doc.setFont('helvetica', 'normal');
+        doc.text('= ' + row[2], x + colWidth/2 - 1, y + 17, { align: 'center' });
+    });
     
-    y += 28;
+    y += 26;
     
     // ===== PROTOCOL DETAILS =====
     doc.setTextColor(navy[0], navy[1], navy[2]);
@@ -245,45 +263,65 @@ export function generatePDF(peptide, results, inputs, previewMode = false) {
         doc.text(row[3], margin + colW + 28, y + 4 + (i * rowH));
     });
     
-    y += 32;
+    y += 35;
     
-    // ===== TIMELINE =====
+    // ===== BENEFITS & CONSIDERATIONS =====
     doc.setTextColor(navy[0], navy[1], navy[2]);
     doc.setFontSize(10);
     doc.setFont('helvetica', 'bold');
-    doc.text((peptide.wks || 0) + '-WEEK CYCLE', margin, y);
-    y += 5;
+    doc.text('BENEFITS & CONSIDERATIONS', margin, y);
+    y += 6;
     
-    const barW = contentW;
-    doc.setFillColor(220, 220, 220);
-    doc.roundedRect(margin, y, barW, 7, 2, 2, 'F');
-    doc.setFillColor(green[0], green[1], green[2]);
-    doc.roundedRect(margin, y, barW, 7, 2, 2, 'F');
-    
-    const weeks = peptide.wks || 0;
-    const markers = Math.min(weeks, 6);
-    for (let i = 0; i <= markers; i++) {
-        const wk = Math.round((i / markers) * weeks);
-        const x = margin + (i / markers) * barW;
-        doc.setDrawColor(white[0], white[1], white[2]);
-        doc.setLineWidth(0.3);
-        doc.line(x, y + 1, x, y + 6);
-        doc.setTextColor(navy[0], navy[1], navy[2]);
-        doc.setFontSize(5);
-        doc.text('W' + wk, x + 1, y + 10);
-    }
-    
-    y += 16;
-    
-    // ===== NOTES =====
-    doc.setFillColor(254, 242, 242);
-    doc.setDrawColor(red[0], red[1], red[2]);
+    // Benefits box
+    doc.setFillColor(220, 252, 231);
+    doc.setDrawColor(green[0], green[1], green[2]);
     doc.setLineWidth(0.3);
-    doc.roundedRect(margin, y, contentW, 12, 2, 2, 'FD');
+    doc.roundedRect(margin, y, contentW / 2 - 4, 35, 3, 3, 'FD');
+    
+    doc.setFillColor(green[0], green[1], green[2]);
+    doc.roundedRect(margin, y, contentW / 2 - 4, 6, 3, 3, 'F');
+    doc.setTextColor(white[0], white[1], white[2]);
+    doc.setFontSize(6);
+    doc.setFont('helvetica', 'bold');
+    doc.text('BENEFITS', margin + 5, y + 4);
+    
+    doc.setTextColor(slate[0], slate[1], slate[2]);
+    doc.setFontSize(5);
+    doc.setFont('helvetica', 'normal');
+    const pros = (peptide.pros || []).slice(0, 5);
+    pros.forEach((p, i) => {
+        doc.text('• ' + p.substring(0, 35), margin + 5, y + 12 + (i * 5));
+    });
+    
+    // Considerations box
+    doc.setFillColor(254, 226, 226);
+    doc.setDrawColor(red[0], red[1], red[2]);
+    doc.roundedRect(margin + contentW / 2 + 2, y, contentW / 2 - 4, 35, 3, 3, 'FD');
     
     doc.setFillColor(red[0], red[1], red[2]);
-    doc.roundedRect(margin + 1, y + 1, contentW - 2, 4, 1, 1, 'F');
+    doc.roundedRect(margin + contentW / 2 + 2, y, contentW / 2 - 4, 6, 3, 3, 'F');
+    doc.setTextColor(white[0], white[1], white[2]);
+    doc.setFontSize(6);
+    doc.setFont('helvetica', 'bold');
+    doc.text('CONSIDERATIONS', margin + contentW / 2 + 6, y + 4);
     
+    doc.setTextColor(slate[0], slate[1], slate[2]);
+    doc.setFontSize(5);
+    doc.setFont('helvetica', 'normal');
+    const cons = (peptide.cons || []).slice(0, 5);
+    cons.forEach((c, i) => {
+        doc.text('• ' + c.substring(0, 35), margin + contentW / 2 + 6, y + 12 + (i * 5));
+    });
+    
+    y += 42;
+    
+    // ===== IMPORTANT =====
+    doc.setFillColor(254, 242, 242);
+    doc.setDrawColor(red[0], red[1], red[2]);
+    doc.roundedRect(margin, y, contentW, 10, 2, 2, 'FD');
+    
+    doc.setFillColor(red[0], red[1], red[2]);
+    doc.roundedRect(margin + 1, y + 1, 30, 4, 1, 1, 'F');
     doc.setTextColor(white[0], white[1], white[2]);
     doc.setFontSize(5);
     doc.setFont('helvetica', 'bold');
@@ -292,7 +330,7 @@ export function generatePDF(peptide, results, inputs, previewMode = false) {
     doc.setTextColor(slate[0], slate[1], slate[2]);
     doc.setFontSize(5);
     doc.setFont('helvetica', 'normal');
-    doc.text('Consult healthcare provider • Start with Conservative dose • Store refrigerated (2-8°C)', margin + 4, y + 9);
+    doc.text('Consult healthcare provider • Start Conservative • Store refrigerated (2-8°C)', margin + 4, y + 8);
     
     // ===== FOOTER =====
     doc.setFillColor(navy[0], navy[1], navy[2]);

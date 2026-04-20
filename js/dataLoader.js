@@ -17,7 +17,7 @@ export async function loadPeptideData() {
     }
     
     try {
-        const response = await fetch('./data/peptides.json?v=9');
+        const response = await fetch('./data/peptides.json?v=19');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }

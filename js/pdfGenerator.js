@@ -80,10 +80,12 @@ export function generatePDF(peptide, results, inputs, previewMode = false) {
     const footerY = 280;
     const maxContentY = footerY - 12;
     
-    // Enhanced spacing for premium feel
-    const sectionGap = 12;      // Increased from default
-    const cardGap = 8;          // Consistent card spacing
+    // Enhanced spacing for premium feel - INCREASED for better breathing room
+    const sectionGap = 16;      // Was 12 - more space between sections
+    const cardGap = 10;         // Was 8 - more space between cards
     const lineWeight = 0.4;     // Consistent line thickness
+    const elementGap = 6;       // Space between related elements
+    const headerGap = 8;        // Space after headers
     
     let y = 0;
     
@@ -203,7 +205,7 @@ export function generatePDF(peptide, results, inputs, previewMode = false) {
     doc.setFont('helvetica', 'normal');
     doc.text(`${inputs.weight || 'N/A'} lbs  •  ${inputs.age || 'N/A'} years  •  ${inputs.vialSize || 'N/A'}mg vial  •  ${inputs.syringe || 'N/A'}U syringe`, margin + 10, y + 19);
     
-    y += sectionGap + 2;
+    y += sectionGap + 10;
     
     // ============ DOSING OPTIONS ============
     doc.setTextColor(colors.navy[0], colors.navy[1], colors.navy[2]);
@@ -371,7 +373,7 @@ export function generatePDF(peptide, results, inputs, previewMode = false) {
     doc.text(`②  Volume: ${doseMg.toFixed(2)}mg ÷ ${conc.toFixed(2)}mg/ml = ${mlValue}ml`, margin + 8, y + 22);
     doc.text(`③  Units: ${mlValue}ml × ${syringeU}U = ${finalUnits} units`, margin + 8, y + 29);
     
-    y += sectionGap;
+    y += sectionGap + 8;
     
     // ============ PROTOCOL DETAILS - Two-column grid ============
     doc.setTextColor(colors.navy[0], colors.navy[1], colors.navy[2]);

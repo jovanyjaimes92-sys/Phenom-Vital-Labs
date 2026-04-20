@@ -1,15 +1,14 @@
 /**
- * PDF Generator Module - Professional Medical Report v5 (FINAL)
+ * PDF Generator Module - Professional Medical Report v6.3
  * 
- * - Clean, modern medical report styling
- * - Perfect spacing and alignment
- * - No overlapping elements
- * - Professional color palette (navy, blue, gray)
- * - Clear hierarchy
- * - All sections: header, peptide info, 3 dosing cards, calculation breakdown,
- *   protocol details table, timeline, warnings footer
- * - Single page layout (A4)
- * - Proper font sizing and weights
+ * Premium medical report styling with final polish:
+ * - Enhanced header depth with gradient effect
+ * - Perfect card shadows and depth
+ * - Refined typography hierarchy
+ * - Timeline with milestone markers
+ * - Polished footer with professional finish
+ * - Consistent border weights throughout
+ * - Premium visual aesthetic
  * 
  * @module pdfGenerator
  */
@@ -38,29 +37,40 @@ export function generatePDF(peptide, results, inputs, previewMode = false) {
     
     const isFixed = peptide.fixed === true;
     
-    // ============ COLOR PALETTE ============
+    // ============ HARMONIZED COLOR PALETTE ============
+    // Premium medical report colors - navy primary, blue accent, gray neutral
     const colors = {
+        // Primary - Deep Navy
         navy: [30, 41, 59],
         navyLight: [51, 65, 85],
+        navyDark: [15, 23, 42],
+        // Accent - Professional Blue
         blue: [59, 130, 246],
         blueDark: [37, 99, 235],
         blueLight: [224, 242, 254],
+        bluePale: [239, 246, 255],
+        // Neutral - Slate/Gray family
         slate: [71, 85, 105],
+        slateLight: [100, 116, 139],
+        slateDark: [51, 65, 85],
         gray: [100, 116, 139],
         grayLight: [148, 163, 184],
+        grayPale: [203, 213, 225],
+        // Background tones
         lightGray: [241, 245, 249],
         borderGray: [226, 232, 240],
         subtleGray: [248, 250, 252],
         white: [255, 255, 255],
+        // Semantic colors
         green: [34, 197, 94],
         greenDark: [22, 163, 74],
-        greenLight: [240, 253, 244],
+        greenLight: [220, 252, 231],
         amber: [245, 158, 11],
         amberDark: [217, 119, 6],
-        amberLight: [255, 251, 235],
+        amberLight: [254, 243, 199],
         red: [239, 68, 68],
-        redDark: [220, 38, 38],
-        redLight: [254, 242, 242]
+        redDark: [185, 28, 28],
+        redLight: [254, 226, 226]
     };
     
     // ============ LAYOUT CONSTANTS ============
@@ -68,7 +78,12 @@ export function generatePDF(peptide, results, inputs, previewMode = false) {
     const margin = 15;
     const contentW = pageW - (margin * 2);
     const footerY = 280;
-    const maxContentY = footerY - 10;
+    const maxContentY = footerY - 12;
+    
+    // Enhanced spacing for premium feel
+    const sectionGap = 12;      // Increased from default
+    const cardGap = 8;          // Consistent card spacing
+    const lineWeight = 0.4;     // Consistent line thickness
     
     let y = 0;
     
@@ -85,58 +100,76 @@ export function generatePDF(peptide, results, inputs, previewMode = false) {
         return false;
     };
     
-    // ============ HEADER SECTION ============
+    // ============ HEADER SECTION - Premium gradient effect ============
+    // Main header background with subtle depth
     doc.setFillColor(colors.navy[0], colors.navy[1], colors.navy[2]);
-    doc.rect(0, 0, pageW, 35, 'F');
+    doc.rect(0, 0, pageW, 38, 'F');
     
-    // Accent line
+    // Subtle gradient overlay (top highlight)
+    doc.setFillColor(colors.navyLight[0], colors.navyLight[1], colors.navyLight[2]);
+    doc.rect(0, 0, pageW, 1, 'F');
+    
+    // Accent line - thicker and more prominent
     doc.setFillColor(colors.blueDark[0], colors.blueDark[1], colors.blueDark[2]);
-    doc.rect(0, 35, pageW, 1, 'F');
+    doc.rect(0, 38, pageW, 2, 'F');
     
     // Logo
     doc.setTextColor(colors.white[0], colors.white[1], colors.white[2]);
-    doc.setFontSize(20);
+    doc.setFontSize(22);
     doc.setFont('helvetica', 'bold');
-    doc.text('PHENOM VITAL LABS', margin, 23);
+    doc.text('PHENOM VITAL LABS', margin, 24);
     
     doc.setFontSize(10);
     doc.setFont('helvetica', 'normal');
-    doc.text('Peptide Protocol Report', margin, 31);
+    doc.setTextColor(colors.grayLight[0], colors.grayLight[1], colors.grayLight[2]);
+    doc.text('Peptide Protocol Report', margin, 33);
     
-    // Date badge
+    // Date badge - improved styling
     const now = new Date();
     const dateStr = now.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-    const timeStr = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
     
     doc.setFillColor(colors.white[0], colors.white[1], colors.white[2]);
-    doc.roundedRect(pageW - margin - 58, 10, 58, 17, 4, 4, 'F');
+    doc.roundedRect(pageW - margin - 56, 11, 56, 16, 3, 3, 'F');
+    
+    // Badge border
+    doc.setDrawColor(colors.blueDark[0], colors.blueDark[1], colors.blueDark[2]);
+    doc.setLineWidth(0.5);
+    doc.roundedRect(pageW - margin - 56, 11, 56, 16, 3, 3, 'S');
     
     doc.setTextColor(colors.navy[0], colors.navy[1], colors.navy[2]);
-    doc.setFontSize(7);
+    doc.setFontSize(6);
     doc.setFont('helvetica', 'bold');
-    doc.text('REPORT DATE', pageW - margin - 29, 16, { align: 'center' });
+    doc.text('GENERATED', pageW - margin - 28, 16, { align: 'center' });
     doc.setFont('helvetica', 'normal');
-    doc.text(dateStr, pageW - margin - 29, 21, { align: 'center' });
+    doc.text(dateStr, pageW - margin - 28, 23, { align: 'center' });
     
-    y = 41;
+    y = 46;
     
     // ============ PEPTIDE INFO ============
     const name = peptide.name ? peptide.name.toUpperCase() : 'UNKNOWN PEPTIDE';
     const category = peptide.category || 'Unknown Category';
     
+    // Peptide name - consistent large heading with proper spacing
     doc.setTextColor(colors.navy[0], colors.navy[1], colors.navy[2]);
-    doc.setFontSize(18);
+    doc.setFontSize(15);
     doc.setFont('helvetica', 'bold');
     doc.text(name, margin, y);
     
+    // Category badge - positioned inline with better sizing
+    const catW = doc.getTextWidth(category.toUpperCase()) + 10;
+    doc.setFillColor(colors.bluePale[0], colors.bluePale[1], colors.bluePale[2]);
+    doc.setDrawColor(colors.blueDark[0], colors.blueDark[1], colors.blueDark[2]);
+    doc.setLineWidth(lineWeight);
+    doc.roundedRect(pageW - margin - catW, y - 5, catW, 9, 2, 2, 'FD');
+    
     doc.setTextColor(colors.blueDark[0], colors.blueDark[1], colors.blueDark[2]);
-    doc.setFontSize(10);
+    doc.setFontSize(7);
     doc.setFont('helvetica', 'bold');
-    doc.text(category.toUpperCase(), margin, y + 7);
+    doc.text(category.toUpperCase(), pageW - margin - catW/2, y, { align: 'center' });
     
-    y += 16;
+    y += 14;
     
-    // ============ SUMMARY BAR ============
+    // ============ SUMMARY BAR - Premium card styling ============
     const recDose = isFixed 
         ? `${results.doses.med} mg (${(results.doses.med * 1000).toFixed(0)} mcg)`
         : `${(results.doses.med || 0).toLocaleString()} mcg`;
@@ -144,49 +177,56 @@ export function generatePDF(peptide, results, inputs, previewMode = false) {
     const freq = peptide.freq || 'As directed';
     const syringeUnits = results.syringeUnits?.med || 'N/A';
     
+    // Card shadow
+    doc.setFillColor(colors.grayPale[0], colors.grayPale[1], colors.grayPale[2]);
+    doc.roundedRect(margin + 1, y + 1, contentW, 26, 6, 6, 'F');
+    
+    // Card background
     doc.setFillColor(colors.blueLight[0], colors.blueLight[1], colors.blueLight[2]);
     doc.setDrawColor(colors.blueDark[0], colors.blueDark[1], colors.blueDark[2]);
-    doc.setLineWidth(0.5);
-    doc.roundedRect(margin, y, contentW, 24, 5, 5, 'FD');
+    doc.setLineWidth(lineWeight);
+    doc.roundedRect(margin, y, contentW, 26, 6, 6, 'FD');
     
-    // Left accent bar
+    // Left accent bar - extended
     doc.setFillColor(colors.blueDark[0], colors.blueDark[1], colors.blueDark[2]);
-    doc.rect(margin, y, 4, 24, 'F');
+    doc.roundedRect(margin, y, 5, 26, 6, 6, 'F');
+    doc.rect(margin + 3, y, 2, 26, 'F');
     
-    // Summary content
+    // Summary content - better aligned
     doc.setTextColor(colors.navy[0], colors.navy[1], colors.navy[2]);
     doc.setFontSize(11);
     doc.setFont('helvetica', 'bold');
-    doc.text(`Recommended: ${recDose}  |  ${syringeUnits} units  |  ${freq}`, margin + 8, y + 10);
+    doc.text(`Recommended: ${recDose}  |  ${syringeUnits} units  |  ${freq}`, margin + 10, y + 10);
     
-    doc.setTextColor(colors.slate[0], colors.slate[1], colors.slate[2]);
+    doc.setTextColor(colors.slateLight[0], colors.slateLight[1], colors.slateLight[2]);
     doc.setFontSize(8);
     doc.setFont('helvetica', 'normal');
-    doc.text(`${inputs.weight || 'N/A'} lbs  |  ${inputs.age || 'N/A'} years  |  ${inputs.vialSize || 'N/A'}mg vial  |  ${inputs.syringe || 'N/A'}U syringe`, margin + 8, y + 18);
+    doc.text(`${inputs.weight || 'N/A'} lbs  •  ${inputs.age || 'N/A'} years  •  ${inputs.vialSize || 'N/A'}mg vial  •  ${inputs.syringe || 'N/A'}U syringe`, margin + 10, y + 19);
     
-    y += 30;
+    y += sectionGap + 2;
     
     // ============ DOSING OPTIONS ============
     doc.setTextColor(colors.navy[0], colors.navy[1], colors.navy[2]);
-    doc.setFontSize(13);
+    doc.setFontSize(12);
     doc.setFont('helvetica', 'bold');
     doc.text('DOSING OPTIONS', margin, y);
     
-    // Section underline
+    // Section underline - consistent 2.5mm height
     doc.setFillColor(colors.blue[0], colors.blue[1], colors.blue[2]);
-    doc.rect(margin, y + 2, 80, 2, 'F');
+    doc.rect(margin, y + 2.5, 78, 1.8, 'F');
     
     // Legend text
-    doc.setTextColor(colors.gray[0], colors.gray[1], colors.gray[2]);
+    doc.setTextColor(colors.slateLight[0], colors.slateLight[1], colors.slateLight[2]);
     doc.setFontSize(7);
-    doc.setFont('helvetica', 'italic');
-    doc.text('Select based on your experience level', pageW - margin, y + 1, { align: 'right' });
+    doc.setFont('helvetica', 'normal');
+    doc.text('Choose based on experience level', pageW - margin, y + 1.5, { align: 'right' });
     
-    y += 8;
+    y += 10;
     
-    // Dosing cards
+    // Dosing cards - uniform sizing and spacing
     const cardW = contentW / 3;
-    const cardH = 48;
+    const cardH = 52;
+    const innerCardW = cardW - 6;
     
     const doseConfigs = [
         { 
@@ -220,91 +260,102 @@ export function generatePDF(peptide, results, inputs, previewMode = false) {
     ];
     
     doseConfigs.forEach((d, i) => {
-        const x = margin + (i * cardW);
-        const innerCardW = cardW - 5;
+        const x = margin + (i * cardW) + 3;
         
-        // Shadow
+        // Subtle shadow
         doc.setFillColor(colors.borderGray[0], colors.borderGray[1], colors.borderGray[2]);
-        doc.roundedRect(x + 2, y + 1, innerCardW, cardH, 5, 5, 'F');
+        doc.roundedRect(x + 1, y + 1, innerCardW, cardH, 4, 4, 'F');
         
         // Card background
         doc.setFillColor(d.bg[0], d.bg[1], d.bg[2]);
         doc.setDrawColor(d.color[0], d.color[1], d.color[2]);
-        doc.setLineWidth(0.5);
-        doc.roundedRect(x + 1, y, innerCardW, cardH, 5, 5, 'FD');
+        doc.setLineWidth(lineWeight);
+        doc.roundedRect(x, y, innerCardW, cardH, 4, 4, 'FD');
         
-        // Header strip
+        // Header strip - full width
         doc.setFillColor(d.color[0], d.color[1], d.color[2]);
-        doc.rect(x + 1, y, innerCardW, 6, 'F');
-        doc.setFillColor(d.accent[0], d.accent[1], d.accent[2]);
-        doc.rect(x + 1, y + 5, innerCardW, 1, 'F');
+        doc.roundedRect(x, y, innerCardW, 7, 4, 4, 'F');
+        doc.rect(x, y + 4, innerCardW, 3, 'F');
         
-        // Label
+        // Label - positioned below header
         doc.setTextColor(colors.slate[0], colors.slate[1], colors.slate[2]);
         doc.setFontSize(7);
         doc.setFont('helvetica', 'bold');
-        doc.text(d.label, x + innerCardW/2 + 0.5, y + 11, { align: 'center' });
+        doc.text(d.label, x + innerCardW/2, y + 13, { align: 'center' });
         
-        // Recommended badge
+        // Description with badge for recommended
         if (d.rec) {
+            // Recommended badge - positioned above description
             doc.setFillColor(colors.blueDark[0], colors.blueDark[1], colors.blueDark[2]);
-            doc.roundedRect(x + (innerCardW - 38)/2, y + 13, 38, 7, 3, 3, 'F');
+            doc.roundedRect(x + innerCardW/2 - 20, y + 16, 40, 7, 2, 2, 'F');
             doc.setTextColor(colors.white[0], colors.white[1], colors.white[2]);
             doc.setFontSize(6);
             doc.setFont('helvetica', 'bold');
-            doc.text('RECOMMENDED', x + innerCardW/2 + 1, y + 18, { align: 'center' });
+            doc.text('RECOMMENDED', x + innerCardW/2, y + 20.5, { align: 'center' });
+            
+            // Description below badge
+            doc.setTextColor(colors.gray[0], colors.gray[1], colors.gray[2]);
+            doc.setFontSize(6);
+            doc.setFont('helvetica', 'normal');
+            doc.text(d.desc, x + innerCardW/2, y + 27, { align: 'center' });
+        } else {
+            // Description only
+            doc.setTextColor(colors.gray[0], colors.gray[1], colors.gray[2]);
+            doc.setFontSize(6);
+            doc.setFont('helvetica', 'normal');
+            doc.text(d.desc, x + innerCardW/2, y + 20, { align: 'center' });
         }
         
-        // Description
-        doc.setTextColor(colors.gray[0], colors.gray[1], colors.gray[2]);
-        doc.setFontSize(6);
-        doc.setFont('helvetica', 'italic');
-        doc.text(d.desc, x + innerCardW/2 + 0.5, y + 15, { align: 'center' });
-        
-        // Dose value
+        // Dose value - perfectly centered
+        const valueY = d.rec ? y + 36 : y + 31;
         doc.setTextColor(colors.navy[0], colors.navy[1], colors.navy[2]);
-        doc.setFontSize(d.rec ? 15 : 13);
+        doc.setFontSize(d.rec ? 14 : 13);
         doc.setFont('helvetica', 'bold');
         
         if (isFixed) {
             const val = Number(d.val) || 0;
-            doc.text(val.toFixed(2).replace(/\.?0+$/, '') + ' mg', x + innerCardW/2 + 0.5, y + 28, { align: 'center' });
+            doc.text(val.toFixed(2).replace(/\.?0+$/, '') + ' mg', x + innerCardW/2, valueY, { align: 'center' });
             doc.setFontSize(7);
-            doc.setTextColor(colors.gray[0], colors.gray[1], colors.gray[2]);
+            doc.setTextColor(colors.slateLight[0], colors.slateLight[1], colors.slateLight[2]);
             doc.setFont('helvetica', 'normal');
-            doc.text('(' + (val * 1000).toFixed(0) + ' mcg)', x + innerCardW/2 + 0.5, y + 33, { align: 'center' });
+            doc.text('(' + (val * 1000).toFixed(0) + ' mcg)', x + innerCardW/2, valueY + 4.5, { align: 'center' });
         } else {
             const val = Number(d.val) || 0;
-            doc.text(val.toLocaleString() + ' mcg', x + innerCardW/2 + 0.5, y + 28, { align: 'center' });
+            doc.text(val.toLocaleString() + ' mcg', x + innerCardW/2, valueY, { align: 'center' });
         }
         
         // Units box
         doc.setFillColor(colors.white[0], colors.white[1], colors.white[2]);
-        doc.setDrawColor(colors.borderGray[0], colors.borderGray[1], colors.borderGray[2]);
-        doc.roundedRect(x + 6, y + 38, innerCardW - 13, 7, 2, 2, 'FD');
+        doc.setDrawColor(colors.grayPale[0], colors.grayPale[1], colors.grayPale[2]);
+        doc.roundedRect(x + 5, y + 42, innerCardW - 10, 7, 2, 2, 'FD');
         doc.setTextColor(colors.slate[0], colors.slate[1], colors.slate[2]);
         doc.setFontSize(7);
         doc.setFont('helvetica', 'bold');
-        doc.text(`Draw ${d.units} units`, x + innerCardW/2 + 0.5, y + 43, { align: 'center' });
+        doc.text(`Draw ${d.units} units`, x + innerCardW/2, y + 47, { align: 'center' });
     });
     
-    y += cardH + 10;
+    y += cardH + sectionGap;
     
-    // ============ CALCULATION BREAKDOWN ============
+    // ============ CALCULATION BREAKDOWN - Improved styling ============
+    const calcH = 32;
+    
+    // Container with subtle border
     doc.setFillColor(colors.subtleGray[0], colors.subtleGray[1], colors.subtleGray[2]);
     doc.setDrawColor(colors.borderGray[0], colors.borderGray[1], colors.borderGray[2]);
-    doc.setLineWidth(0.3);
-    doc.roundedRect(margin, y, contentW, 28, 4, 4, 'FD');
+    doc.setLineWidth(lineWeight);
+    doc.roundedRect(margin, y, contentW, calcH, 4, 4, 'FD');
     
+    // Left accent bar
     doc.setFillColor(colors.slate[0], colors.slate[1], colors.slate[2]);
-    doc.rect(margin, y, 3, 28, 'F');
+    doc.roundedRect(margin, y, 4, calcH, 4, 4, 'F');
+    doc.rect(margin + 2, y, 2, calcH, 'F');
     
     doc.setTextColor(colors.navy[0], colors.navy[1], colors.navy[2]);
     doc.setFontSize(9);
     doc.setFont('helvetica', 'bold');
     doc.text('CALCULATION BREAKDOWN', margin + 8, y + 7);
     
-    // Calculation steps
+    // Calculation steps with better spacing
     const doseMg = isFixed ? (results.doses?.med || 0) : (results.doses?.med || 0) / 1000;
     const vialSize = Number(inputs.vialSize) || 5;
     const conc = vialSize / 3;
@@ -312,25 +363,25 @@ export function generatePDF(peptide, results, inputs, previewMode = false) {
     const syringeU = Number(inputs.syringe) || 50;
     const finalUnits = (Number(mlValue) * syringeU).toFixed(0);
     
-    doc.setTextColor(colors.slate[0], colors.slate[1], colors.slate[2]);
+    doc.setTextColor(colors.slateLight[0], colors.slateLight[1], colors.slateLight[2]);
     doc.setFontSize(7);
     doc.setFont('helvetica', 'normal');
     
-    doc.text(`Step 1: Concentration = ${vialSize}mg ÷ 3ml = ${conc.toFixed(2)}mg/ml`, margin + 8, y + 14);
-    doc.text(`Step 2: Volume = ${doseMg.toFixed(2)}mg ÷ ${conc.toFixed(2)}mg/ml = ${mlValue}ml`, margin + 8, y + 20);
-    doc.text(`Step 3: Units = ${mlValue}ml × ${syringeU}U = ${finalUnits} units`, margin + 8, y + 26);
+    doc.text(`①  Concentration: ${vialSize}mg ÷ 3ml = ${conc.toFixed(2)}mg/ml`, margin + 8, y + 15);
+    doc.text(`②  Volume: ${doseMg.toFixed(2)}mg ÷ ${conc.toFixed(2)}mg/ml = ${mlValue}ml`, margin + 8, y + 22);
+    doc.text(`③  Units: ${mlValue}ml × ${syringeU}U = ${finalUnits} units`, margin + 8, y + 29);
     
-    y += 34;
+    y += sectionGap;
     
-    // ============ PROTOCOL DETAILS ============
+    // ============ PROTOCOL DETAILS - Two-column grid ============
     doc.setTextColor(colors.navy[0], colors.navy[1], colors.navy[2]);
-    doc.setFontSize(13);
+    doc.setFontSize(12);
     doc.setFont('helvetica', 'bold');
     doc.text('PROTOCOL DETAILS', margin, y);
     doc.setFillColor(colors.blue[0], colors.blue[1], colors.blue[2]);
-    doc.rect(margin, y + 2, 85, 2, 'F');
+    doc.rect(margin, y + 2.5, 85, 1.8, 'F');
     
-    y += 8;
+    y += 10;
     
     const details = [
         ['Half-Life', peptide.halfLife || 'N/A', 'Frequency', peptide.freq || 'N/A'],
@@ -339,127 +390,186 @@ export function generatePDF(peptide, results, inputs, previewMode = false) {
         ['Category', peptide.category || 'N/A', 'Type', isFixed ? 'Fixed dose' : 'Weight-based']
     ];
     
-    const rowH = 7;
+    const rowH = 8;
     const col1W = contentW * 0.5;
+    const tableH = details.length * rowH + 4;
+    
+    // Table background
+    doc.setFillColor(colors.white[0], colors.white[1], colors.white[2]);
+    doc.setDrawColor(colors.borderGray[0], colors.borderGray[1], colors.borderGray[2]);
+    doc.setLineWidth(lineWeight);
+    doc.roundedRect(margin, y, contentW, tableH, 3, 3, 'FD');
     
     details.forEach((row, i) => {
+        // Alternating row background
         if (i % 2 === 0) {
             doc.setFillColor(colors.subtleGray[0], colors.subtleGray[1], colors.subtleGray[2]);
-        } else {
-            doc.setFillColor(colors.white[0], colors.white[1], colors.white[2]);
+            doc.rect(margin + 2, y + 2 + (i * rowH), contentW - 4, rowH, 'F');
         }
-        doc.rect(margin, y + (i * rowH), contentW, rowH, 'F');
         
-        doc.setDrawColor(colors.borderGray[0], colors.borderGray[1], colors.borderGray[2]);
-        doc.setLineWidth(0.2);
+        // Row border
         if (i < details.length - 1) {
-            doc.line(margin, y + (i * rowH) + rowH, margin + contentW, y + (i * rowH) + rowH);
+            doc.setDrawColor(colors.borderGray[0], colors.borderGray[1], colors.borderGray[2]);
+            doc.setLineWidth(0.2);
+            doc.line(margin + 4, y + 2 + (i * rowH) + rowH, margin + contentW - 4, y + 2 + (i * rowH) + rowH);
         }
         
-        // Bullet icons
+        // Left column
         doc.setTextColor(colors.blueDark[0], colors.blueDark[1], colors.blueDark[2]);
-        doc.setFontSize(8);
-        doc.setFont('helvetica', 'bold');
-        doc.text('▸', margin + 3, y + 4.5 + (i * rowH));
-        
-        doc.setTextColor(colors.gray[0], colors.gray[1], colors.gray[2]);
         doc.setFontSize(7);
-        doc.text(row[0], margin + 6, y + 4.5 + (i * rowH));
+        doc.setFont('helvetica', 'bold');
+        doc.text('◆', margin + 5, y + 6 + (i * rowH));
+        
+        doc.setTextColor(colors.slateLight[0], colors.slateLight[1], colors.slateLight[2]);
+        doc.setFont('helvetica', 'normal');
+        doc.text(row[0], margin + 9, y + 6 + (i * rowH));
         
         doc.setTextColor(colors.navy[0], colors.navy[1], colors.navy[2]);
-        doc.setFont('helvetica', 'normal');
-        doc.text(row[1], margin + 36, y + 4.5 + (i * rowH));
+        doc.setFont('helvetica', 'bold');
+        doc.text(row[1], margin + 42, y + 6 + (i * rowH));
         
+        // Right column
         doc.setTextColor(colors.blueDark[0], colors.blueDark[1], colors.blueDark[2]);
         doc.setFont('helvetica', 'bold');
-        doc.text('▸', margin + col1W + 3, y + 4.5 + (i * rowH));
+        doc.text('◆', margin + col1W + 2, y + 6 + (i * rowH));
         
-        doc.setTextColor(colors.gray[0], colors.gray[1], colors.gray[2]);
-        doc.text(row[2], margin + col1W + 6, y + 4.5 + (i * rowH));
+        doc.setTextColor(colors.slateLight[0], colors.slateLight[1], colors.slateLight[2]);
+        doc.setFont('helvetica', 'normal');
+        doc.text(row[2], margin + col1W + 6, y + 6 + (i * rowH));
         
         doc.setTextColor(colors.navy[0], colors.navy[1], colors.navy[2]);
-        doc.setFont('helvetica', 'normal');
-        doc.text(row[3], margin + col1W + 36, y + 4.5 + (i * rowH));
+        doc.setFont('helvetica', 'bold');
+        doc.text(row[3], margin + col1W + 38, y + 6 + (i * rowH));
     });
     
-    y += 34;
+    y += tableH + sectionGap;
     
-    // ============ TIMELINE ============
+    // ============ TIMELINE - Enhanced Visualization ============
     doc.setTextColor(colors.navy[0], colors.navy[1], colors.navy[2]);
-    doc.setFontSize(13);
+    doc.setFontSize(12);
     doc.setFont('helvetica', 'bold');
-    doc.text((peptide.wks || 0) + '-WEEK CYCLE', margin, y);
+    doc.text((peptide.wks || 0) + '-WEEK PROTOCOL TIMELINE', margin, y);
     doc.setFillColor(colors.blue[0], colors.blue[1], colors.blue[2]);
-    doc.rect(margin, y + 2, 75, 2, 'F');
+    doc.rect(margin, y + 2.5, 110, 1.8, 'F');
     
-    y += 8;
+    y += 10;
     
     const barW = contentW;
-    const barH = 11;
-    
-    doc.setFillColor(colors.lightGray[0], colors.lightGray[1], colors.lightGray[2]);
-    doc.roundedRect(margin, y, barW, barH, 5, 5, 'F');
-    doc.setFillColor(colors.greenDark[0], colors.greenDark[1], colors.greenDark[2]);
-    doc.roundedRect(margin, y, barW, barH, 5, 5, 'F');
-    doc.setFillColor(colors.green[0], colors.green[1], colors.green[2]);
-    doc.roundedRect(margin, y, barW, 4, 5, 5, 'F');
-    
+    const barH = 12;
     const weeks = peptide.wks || 0;
-    const markers = Math.min(weeks, 6);
+    
+    // Timeline track background
+    doc.setFillColor(colors.lightGray[0], colors.lightGray[1], colors.lightGray[2]);
+    doc.roundedRect(margin, y, barW, barH, 6, 6, 'F');
+    
+    // Active progress bar
+    doc.setFillColor(colors.green[0], colors.green[1], colors.green[2]);
+    doc.roundedRect(margin, y, barW, barH, 6, 6, 'F');
+    
+    // Gradient effect - top highlight
+    doc.setFillColor(74, 222, 128); // lighter green
+    doc.roundedRect(margin, y, barW, 4, 6, 6, 'F');
+    doc.rect(margin, y + 3, barW, 1, 'F');
+    
+    // Timeline markers with labels
+    const markers = Math.min(weeks, 5);
+    const markerSpacing = barW / markers;
     
     for (let i = 0; i <= markers; i++) {
         const wk = Math.round((i / markers) * weeks) || 0;
-        const x = margin + (i / markers) * barW;
+        const x = margin + (i * markerSpacing);
         
+        // Marker line
         if (i > 0 && i < markers) {
             doc.setDrawColor(colors.white[0], colors.white[1], colors.white[2]);
-            doc.setLineWidth(0.5);
+            doc.setLineWidth(0.8);
             doc.line(x, y + 2, x, y + barH - 2);
         }
         
+        // Marker dot at key points
+        if (i === 0 || i === markers || i === Math.floor(markers/2)) {
+            doc.setFillColor(colors.white[0], colors.white[1], colors.white[2]);
+            doc.circle(x, y + barH/2, 2.5, 'F');
+            doc.setFillColor(colors.greenDark[0], colors.greenDark[1], colors.greenDark[2]);
+            doc.circle(x, y + barH/2, 1.5, 'F');
+        }
+        
+        // Week labels - better positioned
         doc.setTextColor(colors.slate[0], colors.slate[1], colors.slate[2]);
         doc.setFontSize(7);
         doc.setFont('helvetica', 'bold');
-        const labelX = i === 0 ? x + 4 : (i === markers ? x - 4 : x);
+        const labelX = i === 0 ? x + 5 : (i === markers ? x - 5 : x);
         const align = i === 0 ? 'left' : (i === markers ? 'right' : 'center');
-        doc.text('W' + wk, labelX, y + 16, { align: align });
+        doc.text(`Week ${wk}`, labelX, y + barH + 8, { align: align });
     }
     
-    y += 22;
+    // Timeline caption
+    doc.setTextColor(colors.grayLight[0], colors.grayLight[1], colors.grayLight[2]);
+    doc.setFontSize(6);
+    doc.setFont('helvetica', 'normal');
+    doc.text('Active treatment period shown above', margin + barW/2, y + barH + 13, { align: 'center' });
     
-    // ============ WARNINGS ============
+    y += 28;
+    
+    // ============ WARNINGS - Premium medical styling ============
+    const warnH = 28;
+    
+    // Warning container with subtle shadow
+    doc.setFillColor(colors.borderGray[0], colors.borderGray[1], colors.borderGray[2]);
+    doc.roundedRect(margin + 1, y + 1, contentW, warnH, 5, 5, 'F');
+    
+    // Main warning box
     doc.setFillColor(colors.redLight[0], colors.redLight[1], colors.redLight[2]);
     doc.setDrawColor(colors.redDark[0], colors.redDark[1], colors.redDark[2]);
-    doc.setLineWidth(0.5);
-    doc.roundedRect(margin, y, contentW, 22, 4, 4, 'FD');
+    doc.setLineWidth(lineWeight * 1.5);
+    doc.roundedRect(margin, y, contentW, warnH, 5, 5, 'FD');
     
+    // Left accent bar with rounded corners
     doc.setFillColor(colors.redDark[0], colors.redDark[1], colors.redDark[2]);
-    doc.rect(margin, y, 4, 22, 'F');
+    doc.roundedRect(margin, y, 5, warnH, 5, 5, 'F');
+    doc.rect(margin + 3, y, 2, warnH, 'F');
     
+    // Warning header badge - elevated
     doc.setFillColor(colors.redDark[0], colors.redDark[1], colors.redDark[2]);
-    doc.roundedRect(margin + 5, y + 2, 55, 7, 3, 3, 'F');
+    doc.roundedRect(margin + 10, y + 4, 55, 8, 2, 2, 'F');
     
     doc.setTextColor(colors.white[0], colors.white[1], colors.white[2]);
     doc.setFontSize(8);
     doc.setFont('helvetica', 'bold');
-    doc.text('⚠️ IMPORTANT', margin + 9, y + 7);
+    doc.text('⚠️ IMPORTANT NOTICE', margin + 15, y + 9);
     
+    // Warning content - three clear points
     doc.setTextColor(colors.slate[0], colors.slate[1], colors.slate[2]);
     doc.setFontSize(7);
     doc.setFont('helvetica', 'normal');
-    doc.text('• Consult healthcare provider  • Start with Conservative dose  • Store refrigerated (2-8°C)', margin + 5, y + 14);
-    doc.text('• This calculator is for research purposes only - not medical advice', margin + 5, y + 19);
+    doc.text('• Consult your healthcare provider before beginning treatment', margin + 10, y + 17);
+    doc.text('• Start with Conservative dose • Store refrigerated (2-8°C)', margin + 10, y + 23);
     
-    // ============ FOOTER ============
+    // ============ FOOTER - Premium polished finish ============
+    // Fixed positioning at bottom with premium styling
+    const finalFooterY = footerY;
+    const footerH = 18;
+    
+    // Footer background with subtle depth
     doc.setFillColor(colors.navy[0], colors.navy[1], colors.navy[2]);
-    doc.rect(0, footerY, pageW, 17, 'F');
-    doc.setFillColor(colors.blueDark[0], colors.blueDark[1], colors.blueDark[2]);
-    doc.rect(0, footerY, pageW, 1, 'F');
+    doc.rect(0, finalFooterY, pageW, footerH, 'F');
     
+    // Top accent line - double for visual weight
+    doc.setFillColor(colors.blueDark[0], colors.blueDark[1], colors.blueDark[2]);
+    doc.rect(0, finalFooterY, pageW, 2, 'F');
+    doc.setFillColor(colors.blue[0], colors.blue[1], colors.blue[2]);
+    doc.rect(0, finalFooterY + 2, pageW, 0.5, 'F');
+    
+    // Footer content - centered with hierarchy
     doc.setTextColor(colors.white[0], colors.white[1], colors.white[2]);
-    doc.setFontSize(8);
+    doc.setFontSize(9);
+    doc.setFont('helvetica', 'bold');
+    doc.text('PHENOM VITAL LABS', pageW/2, finalFooterY + 9, { align: 'center' });
+    
+    doc.setTextColor(colors.grayLight[0], colors.grayLight[1], colors.grayLight[2]);
+    doc.setFontSize(7);
     doc.setFont('helvetica', 'normal');
-    doc.text('Generated by Phenom Vital Labs | Page 1 of 1', pageW/2, footerY + 11, { align: 'center' });
+    doc.text('Generated protocol • For research purposes only', pageW/2, finalFooterY + 14, { align: 'center' });
     
     // ============ OUTPUT ============
     try {

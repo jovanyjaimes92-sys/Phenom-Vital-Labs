@@ -76,8 +76,8 @@ export function generatePDF(peptide, results, inputs, previewMode) {
     
     // Dosage summary
     const recDose = isFixed 
-        ? results.doses.med + ' mg'
-        : (results.doses.med || 0).toLocaleString() + ' mcg';
+        ? (results.doses && results.doses.med ? results.doses.med : 0) + ' mg'
+        : (results.doses && results.doses.med ? results.doses.med : 0).toLocaleString() + ' mcg';
     
     doc.setFillColor(239, 246, 255);
     doc.roundedRect(margin, y, contentW, 10, 2, 2, 'F');
@@ -88,7 +88,7 @@ export function generatePDF(peptide, results, inputs, previewMode) {
     doc.setTextColor(navy[0], navy[1], navy[2]);
     doc.setFontSize(8);
     doc.setFont('helvetica', 'bold');
-    doc.text('Recommended: ' + recDose + ' • ' + (results.syringeUnits.med || 'N/A') + ' units • ' + (peptide.freq || ''), margin + 4, y + 6);
+    doc.text('Recommended: ' + recDose + ' • ' + (results.syringeUnits && results.syringeUnits.med ? results.syringeUnits.med : 'N/A') + ' units • ' + (peptide.freq || ''), margin + 4, y + 6);
     
     y += 14;
     
@@ -100,9 +100,9 @@ export function generatePDF(peptide, results, inputs, previewMode) {
     y += 5;
     
     const configs = [
-        { label: 'Conservative', val: results.doses.low || 0, units: results.syringeUnits.low || 0, color: green, bg: greenLight, rec: false },
-        { label: 'Standard', val: results.doses.med || 0, units: results.syringeUnits.med || 0, color: blue, bg: [239, 246, 255], rec: true },
-        { label: 'Advanced', val: results.doses.high || 0, units: results.syringeUnits.high || 0, color: amber, bg: amberLight, rec: false }
+        { label: 'Conservative', val: results.doses && results.doses.low ? results.doses.low : 0, units: results.syringeUnits && results.syringeUnits.low ? results.syringeUnits.low : 0, color: green, bg: greenLight, rec: false },
+        { label: 'Standard', val: results.doses && results.doses.med ? results.doses.med : 0, units: results.syringeUnits && results.syringeUnits.med ? results.syringeUnits.med : 0, color: blue, bg: [239, 246, 255], rec: true },
+        { label: 'Advanced', val: results.doses && results.doses.high ? results.doses.high : 0, units: results.syringeUnits && results.syringeUnits.high ? results.syringeUnits.high : 0, color: amber, bg: amberLight, rec: false }
     ];
     
     const syrW = (contentW - 8) / 3;
@@ -239,7 +239,7 @@ export function generatePDF(peptide, results, inputs, previewMode) {
     doc.text('CALCULATION', leftX, y);
     y += 5;
     
-    const doseMg = isFixed ? (results.doses.med || 0) : (results.doses.med || 0) / 1000;
+    const doseMg = isFixed ? (results.doses && results.doses.med ? results.doses.med : 0) : ((results.doses && results.doses.med ? results.doses.med : 0) / 1000);
     const vialSize = Number(inputs.vialSize) || 5;
     const conc = vialSize / 3;
     const ml = doseMg / conc;
